@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Program - Daksha Martial</title>
+  <link rel="icon" href="images/logo.jpg">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="navbar.css">
+  <link rel="stylesheet" href="footer.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* RTL */
+    .rtl {
+      direction: rtl;
+    }
+    [dir="rtl"] .title {
+  margin-right: 20px !important;
+}
+
+    /* THEME TOGGLE */
+    :root {
+      --home-bg: #ffffff;
+      --text-color: #111111;
+    }
+
+    [data-theme="dark"] {
+      --home-bg: #000000;
+      --text-color: #ffffff;
+    }
+
+    body {
+      background-color: var(--home-bg) !important;
+      color: var(--text-color);
+      transition: background-color 0.4s ease, color 0.4s ease;
+    }
+
+    [data-theme="dark"] section,
+    [data-theme="dark"] .card {
+      background-color: #000000 !important;
+    }
+ [data-theme="dark"] .btn,
+    [data-theme="dark"] .btn1:hover {
+      color: #000000 !important;
+    }
+    [data-theme="dark"] body,
+    [data-theme="dark"] p,
+    [data-theme="dark"] h1,
+    [data-theme="dark"] h2,
+    [data-theme="dark"] h3,
+    [data-theme="dark"] h4,
+    [data-theme="dark"] h5,
+    [data-theme="dark"] h6,
+    [data-theme="dark"] span,
+    [data-theme="dark"] li,
+    [data-theme="dark"] a,
+    [data-theme="dark"] label,
+    [data-theme="dark"] small,
+    [data-theme="dark"] strong,
+    [data-theme="dark"] .title {
+      color: #ffffff !important;
+    }
+  </style>
+</head>
+
+<body class="font-sans">
+  <!-- navbar -->
+  <div id="navbar"></div>
+  <!-- HERO BANNER -->
+<section class="relative min-h-screen flex items-center bg-white pt-20 overflow-hidden">
+  <div class="max-w-7xl mx-auto px-6 w-full grid lg:grid-cols-2 gap-16 items-center">
+    
+    <div class="relative order-1">
+      
+      <div class="relative aspect-[4/5] rounded-[3rem] overflow-hidden shadow-[0_50px_100px_-20px_rgba(0,0,0,0.15)] border-[12px] border-white m-4">
+        <img src="images/bg7.jpg" 
+             alt="Elite Training" 
+             class="w-full h-full object-cover">
+        
+      </div>
+    </div>
+
+    <div class="relative z-10 order-2 text-center lg:text-left">
+      <div class="inline-block px-4 py-1.5 bg-slate-100 rounded-full mb-8">
+        <span class="btn text-blue-600 font-black uppercase text-[10px] tracking-[0.3em] block">Training Excellence</span>
+      </div>
+      
+      <h1 class="text-5xl md:text-7xl font-black text-slate-950 uppercase tracking-tighter leading-[0.9] mb-8">
+        The Path to <br>
+        <span class="text-blue-600">Mastery.</span>
+      </h1>
+
+      <p class="text-slate-500 text-lg md:text-xl font-medium leading-relaxed max-w-xl mb-12 mx-auto lg:mx-0">
+        Our programs are engineered to build physical power and mental fortitude. From foundational youth classes to elite adult competition.
+      </p>
+
+      <div class="flex flex-col sm:flex-row items-center gap-6 justify-center lg:justify-start">
+        <a href="program-details.html" class="px-10 py-5 bg-blue-600 hover:bg-slate-950 text-white font-black uppercase tracking-widest text-xs rounded-full transition-all duration-300 shadow-xl shadow-blue-600/20">
+          Explore Programs
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="absolute top-0 right-0 w-1/3 h-full bg-slate-50 -z-20 hidden lg:block"></div>
+</section>
+<!-- SECTION1 -->
+ <section id="explore" class="bg-white py-24 px-6">
+  <div class="max-w-7xl mx-auto">
+    
+    <div class="text-center max-w-2xl mx-auto mb-20">
+      <span class="text-blue-600 font-black uppercase text-[10px] tracking-[0.4em] mb-4 block">Tailored Excellence</span>
+      <h2 class="text-4xl md:text-6xl font-black text-slate-950 uppercase tracking-tighter mb-6">
+        Choose Your <span class="text-blue-600">Path.</span>
+      </h2>
+      <p class="text-slate-500 font-medium text-sm md:text-base leading-relaxed">
+        Our curriculum is split into specialized streams to ensure every student receives instruction optimized for their age and physical goals.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-8">
+      
+      <div class="card group relative p-10 rounded-[3rem] bg-slate-50 border border-slate-100 hover:bg-white hover:shadow-2xl hover:shadow-blue-600/10 transition-all duration-500">
+        <div class="flex justify-between items-start mb-12">
+          <div class="w-16 h-16 bg-blue-600 text-white rounded-2xl flex items-center justify-center shadow-lg shadow-blue-600/30">
+            <i class="bi bi-rocket-takeoff text-2xl"></i>
+          </div>
+          <span class="text-slate-300 font-black text-4xl group-hover:text-blue-100 transition-colors">01</span>
+        </div>
+        <h3 class="text-2xl font-black text-slate-950 uppercase tracking-tight mb-4">Kids Elite</h3>
+        <p class="text-slate-500 text-sm leading-relaxed mb-8">Focusing on discipline, anti-bullying, and motor skill development in a high-energy environment.</p>
+        <ul class="space-y-3 mb-10">
+          <li class="flex items-center gap-3 text-xs font-bold text-slate-700 uppercase tracking-wider">
+            <i class="bi bi-check2-circle text-blue-600"></i> Ages 5 — 12
+          </li>
+          <li class="flex items-center gap-3 text-xs font-bold text-slate-700 uppercase tracking-wider">
+            <i class="bi bi-check2-circle text-blue-600"></i> Character Building
+          </li>
+        </ul>
+        <a href="program-details.html" class="inline-flex items-center gap-2 text-blue-600 font-black uppercase text-[10px] tracking-widest hover:gap-4 transition-all">
+          Learn More <i class="bi bi-arrow-right"></i>
+        </a>
+      </div>
+
+      <div class="card group relative p-10 rounded-[3rem] bg-slate-50 border border-slate-100 hover:bg-white hover:shadow-2xl hover:shadow-blue-600/10 transition-all duration-500">
+        <div class="flex justify-between items-start mb-12">
+          <div class="w-16 h-16 bg-slate-950 text-white rounded-2xl flex items-center justify-center shadow-lg">
+            <i class="bi bi-lightning-charge text-2xl"></i>
+          </div>
+          <span class="text-slate-300 font-black text-4xl group-hover:text-blue-100 transition-colors">02</span>
+        </div>
+        <h3 class="text-2xl font-black text-slate-950 uppercase tracking-tight mb-4">Adults Pro</h3>
+        <p class="text-slate-500 text-sm leading-relaxed mb-8">Focusing on discipline, anti-bullying, and motor skill development in a high-energy environment.</p>
+        <ul class="space-y-3 mb-10">
+          <li class="flex items-center gap-3 text-xs font-bold text-slate-700 uppercase tracking-wider">
+            <i class="bi bi-check2-circle text-blue-600"></i> Ages 13+
+          </li>
+          <li class="flex items-center gap-3 text-xs font-bold text-slate-700 uppercase tracking-wider">
+            <i class="bi bi-check2-circle text-blue-600"></i> Fitness & Defense
+          </li>
+        </ul>
+        <a href="program-details.html" class="inline-flex items-center gap-2 text-blue-600 font-black uppercase text-[10px] tracking-widest hover:gap-4 transition-all">
+          Learn More <i class="bi bi-arrow-right"></i>
+        </a>
+      </div>
+
+      <div class="card group relative p-10 rounded-[3rem] bg-slate-50 border border-slate-100 hover:bg-white hover:shadow-2xl hover:shadow-blue-600/10 transition-all duration-500">
+        <div class="flex justify-between items-start mb-12">
+          <div class="w-16 h-16 bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center">
+            <i class="bi bi-trophy text-2xl"></i>
+          </div>
+          <span class="text-slate-300 font-black text-4xl group-hover:text-blue-100 transition-colors">03</span>
+        </div>
+        <h3 class="text-2xl font-black text-slate-950 uppercase tracking-tight mb-4">Competition</h3>
+        <p class="text-slate-500 text-sm leading-relaxed mb-8">Focusing on discipline, anti-bullying, and motor skill development in a high-energy environment.</p>
+        <ul class="space-y-3 mb-10">
+          <li class="flex items-center gap-3 text-xs font-bold text-slate-700 uppercase tracking-wider">
+            <i class="bi bi-check2-circle text-blue-600"></i> Invitational Only
+          </li>
+          <li class="flex items-center gap-3 text-xs font-bold text-slate-700 uppercase tracking-wider">
+            <i class="bi bi-check2-circle text-blue-600"></i> Advanced Sparring
+          </li>
+        </ul>
+        <a href="program-details.html" class="inline-flex items-center gap-2 text-blue-600 font-black uppercase text-[10px] tracking-widest hover:gap-4 transition-all">
+          Learn More <i class="bi bi-arrow-right"></i>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- SECTION2 -->
+ <section class="bg-white py-24 px-6">
+  <div class="max-w-7xl mx-auto">
+    
+    <div class="text-center max-w-3xl mx-auto mb-20">
+      <span class="text-blue-600 font-black uppercase text-[10px] tracking-[0.5em] mb-4 block">The Daksha Syllabus</span>
+      <h2 class="text-4xl md:text-6xl font-black text-slate-950 uppercase tracking-tighter mb-6">
+        Master Every <span class="text-blue-600">Style.</span>
+      </h2>
+      <p class="text-slate-500 font-medium text-sm md:text-base leading-relaxed">
+        Our curriculum integrates the precision of Olympic sports with the heritage of traditional combat arts.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      
+      <div class="card group bg-slate-50 p-10 rounded-[3rem] border border-slate-100 hover:bg-white hover:shadow-2xl hover:shadow-blue-600/10 transition-all duration-500 flex flex-col justify-between h-full">
+        <div>
+          <div class="w-14 h-14 bg-blue-600 text-white rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-blue-600/20">
+            <i class="bi bi-slash-lg text-2xl rotate-45"></i>
+          </div>
+          <h3 class="text-2xl font-black text-slate-950 uppercase tracking-tight mb-4">Silambam</h3>
+          <p class="text-slate-500 text-xs leading-relaxed mb-8">
+            Traditional Indian staff fencing. Master the fluid rotational movements and rhythmic footwork of Tamil Nadu’s ancient warrior art.
+          </p>
+        </div>
+        <div class="pt-6 border-t border-slate-200">
+          <a href="program-details.html" class="inline-flex items-center gap-2 text-blue-600 font-black uppercase text-[10px] tracking-widest hover:gap-4 transition-all">
+            Learn More <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="card group bg-slate-50 p-10 rounded-[3rem] border border-slate-100 hover:bg-white hover:shadow-2xl hover:shadow-blue-600/10 transition-all duration-500 flex flex-col justify-between h-full">
+        <div>
+          <div class="w-14 h-14 bg-slate-950 text-white rounded-2xl flex items-center justify-center mb-8 shadow-lg">
+            <i class="bi bi-hand-index-thumb-fill text-2xl"></i>
+          </div>
+          <h3 class="text-2xl font-black text-slate-950 uppercase tracking-tight mb-4">Karate</h3>
+          <p class="text-slate-500 text-xs leading-relaxed mb-8">
+            Traditional Indian staff fencing. Master the fluid rotational movements and rhythmic footwork of Tamil Nadu’s ancient warrior art.
+          </p>
+        </div>
+        <div class="pt-6 border-t border-slate-200">
+          <a href="program-details.html" class="inline-flex items-center gap-2 text-blue-600 font-black uppercase text-[10px] tracking-widest hover:gap-4 transition-all">
+            Learn More <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="card group bg-slate-50 p-10 rounded-[3rem] border border-slate-100 hover:bg-white hover:shadow-2xl hover:shadow-blue-600/10 transition-all duration-500 flex flex-col justify-between h-full">
+        <div>
+          <div class="w-14 h-14 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center mb-8">
+            <i class="bi bi-lightning-charge-fill text-2xl"></i>
+          </div>
+          <h3 class="text-2xl font-black text-slate-950 uppercase tracking-tight mb-4">Taekwondo</h3>
+          <p class="text-slate-500 text-xs leading-relaxed mb-8">
+           Traditional Indian staff fencing. Master the fluid rotational movements and rhythmic footwork of Tamil Nadu’s ancient warrior art.
+          </p>
+        </div>
+        <div class="pt-6 border-t border-slate-200">
+          <a href="program-details.html" class="inline-flex items-center gap-2 text-blue-600 font-black uppercase text-[10px] tracking-widest hover:gap-4 transition-all">
+            Learn More <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="card group bg-slate-50 p-10 rounded-[3rem] border border-slate-100 hover:bg-white hover:shadow-2xl hover:shadow-blue-600/10 transition-all duration-500 flex flex-col justify-between h-full">
+        <div>
+          <div class="w-14 h-14 bg-slate-200 text-slate-900 rounded-2xl flex items-center justify-center mb-8">
+            <i class="bi bi-shield-lock-fill text-2xl"></i>
+          </div>
+          <h3 class="text-2xl font-black text-slate-950 uppercase tracking-tight mb-4">Tactical</h3>
+          <p class="text-slate-500 text-xs leading-relaxed mb-8">
+           Traditional Indian staff fencing. Master the fluid rotational movements and rhythmic footwork of Tamil Nadu’s ancient warrior art.
+          </p>
+        </div>
+        <div class="pt-6 border-t border-slate-200">
+          <a href="program-details.html" class="inline-flex items-center gap-2 text-blue-600 font-black uppercase text-[10px] tracking-widest hover:gap-4 transition-all">
+            Learn More <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- SECTION3 -->
+ <section class="bg-slate-950 py-24 px-6 overflow-hidden">
+  <div class="max-w-7xl mx-auto">
+    
+    <div class="flex flex-col lg:flex-row justify-between items-start gap-12 mb-20">
+      <div class="max-w-2xl">
+        <span class="text-blue-500 font-black uppercase text-[10px] tracking-[0.5em] mb-4 block">The Journey</span>
+        <h2 class="text-4xl md:text-6xl font-black text-white uppercase tracking-tighter">
+          Rank <span class="text-blue-600">Evolution.</span>
+        </h2>
+      </div>
+      <p class="text-slate-400 text-sm md:text-base max-w-md leading-relaxed">
+        Our grading system follows international standards. Each rank represents a specific set of technical skills, physical endurance, and mental maturity.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4">
+      
+      <div class="bg-white/5 border border-white/10 p-8 rounded-[2rem] hover:bg-white/10 transition-all">
+        <div class="w-full h-2 bg-white rounded-full mb-6"></div>
+        <h4 class="text-white font-black uppercase tracking-tight text-xl mb-2">Novice</h4>
+        <p class="text-blue-500 font-bold text-[10px] uppercase tracking-widest mb-4">White — Yellow</p>
+        <p class="text-slate-400 text-[11px] leading-relaxed">Foundational stances, basic blocks, and the introduction of martial etiquette.</p>
+      </div>
+
+      <div class="bg-white/5 border border-white/10 p-8 rounded-[2rem] hover:bg-white/10 transition-all">
+        <div class="w-full h-2 bg-green-500 rounded-full mb-6 shadow-[0_0_15px_rgba(34,197,94,0.3)]"></div>
+        <h4 class="text-white font-black uppercase tracking-tight text-xl mb-2">Intermediate</h4>
+        <p class="text-blue-500 font-bold text-[10px] uppercase tracking-widest mb-4">Green — Blue</p>
+        <p class="text-slate-400 text-[11px] leading-relaxed">Foundational stances, basic blocks, and the introduction of martial etiquette.</p>
+      </div>
+
+      <div class="bg-white/5 border border-white/10 p-8 rounded-[2rem] hover:bg-white/10 transition-all">
+        <div class="w-full h-2 bg-red-600 rounded-full mb-6 shadow-[0_0_15px_rgba(220,38,38,0.3)]"></div>
+        <h4 class="text-white font-black uppercase tracking-tight text-xl mb-2">Advanced</h4>
+        <p class="text-blue-500 font-bold text-[10px] uppercase tracking-widest mb-4">Red — Brown</p>
+        <p class="text-slate-400 text-[11px] leading-relaxed">Foundational stances, basic blocks, and the introduction of martial etiquette.</p>
+      </div>
+
+      <div class="bg-white/5 border border-white/10 p-8 rounded-[2rem] hover:bg-white/10 transition-all border-dashed">
+        <div class="w-full h-2 bg-gradient-to-r from-red-600 to-black rounded-full mb-6"></div>
+        <h4 class="text-white font-black uppercase tracking-tight text-xl mb-2">Candidate</h4>
+        <p class="text-blue-500 font-bold text-[10px] uppercase tracking-widest mb-4">Black Stripe</p>
+        <p class="text-slate-400 text-[11px] leading-relaxed">Foundational stances, basic blocks, and the introduction of martial etiquette.</p>
+      </div>
+
+      <div class="bg-blue-600 p-8 rounded-[2rem] shadow-2xl shadow-blue-600/20 transition-all">
+        <div class="w-full h-2 bg-black rounded-full mb-6"></div>
+        <h4 class="text-white font-black uppercase tracking-tight text-xl mb-2">Elite</h4>
+        <p class="text-white/80 font-bold text-[10px] uppercase tracking-widest mb-4"> Black Belt</p>
+        <p class="text-white/90 text-[11px] leading-relaxed font-medium">Foundational stances, basic blocks, and the introduction of martial etiquette.</p>
+      </div>
+
+    </div>
+
+    
+
+    <div class="mt-12 flex items-center gap-4 bg-white/5 p-4 rounded-2xl border border-white/5 max-w-max">
+       <i class="bi bi-info-circle text-blue-500"></i>
+       <p class="text-slate-500 text-[10px] font-bold uppercase tracking-widest">Grading conducted quarterly under international grandmaster supervision.</p>
+    </div>
+
+  </div>
+</section>
+<!-- SECTION4 -->
+ <section class="bg-slate-50 py-24 px-6 overflow-hidden">
+  <div class="max-w-7xl mx-auto">
+    
+    <div class="text-center max-w-2xl mx-auto mb-20">
+      <span class="text-blue-600 font-black uppercase text-[10px] tracking-[0.4em] mb-4 block">Transparent Growth</span>
+      <h2 class="text-4xl md:text-5xl font-black text-slate-950 uppercase tracking-tighter mb-6">
+        The Training <span class="text-blue-600">Experience.</span>
+      </h2>
+      <p class="text-slate-500 font-medium text-sm leading-relaxed">
+        Whether you are looking for a hobby or a competitive career, we have a structured path for your development.
+      </p>
+    </div>
+
+    <div class="overflow-x-auto">
+      <table class="w-full text-left border-separate border-spacing-y-4">
+        <thead>
+          <tr class="text-slate-400 uppercase text-[10px] tracking-[0.3em] font-black">
+            <th class="px-8 py-4">Program Feature</th>
+            <th class="px-8 py-4 text-center">Kids Elite</th>
+            <th class="px-8 py-4 text-center">Adults Pro</th>
+            <th class="px-8 py-4 text-center">Competition</th>
+          </tr>
+        </thead>
+        <tbody class="text-sm">
+          <tr class="bg-white shadow-sm rounded-2xl">
+            <td class="px-8 py-6 font-black text-slate-950 rounded-l-2xl border-l border-y border-slate-100 uppercase tracking-tighter">Sessions per week</td>
+            <td class="px-8 py-6 text-center text-slate-500 border-y border-slate-100">2 — 3 Classes</td>
+            <td class="px-8 py-6 text-center text-slate-500 border-y border-slate-100">3 — 5 Classes</td>
+            <td class="px-8 py-6 text-center text-slate-500 border-y border-r border-slate-100 rounded-r-2xl font-bold">Daily + Drills</td>
+          </tr>
+          <tr class="bg-white shadow-sm rounded-2xl">
+            <td class="px-8 py-6 font-black text-slate-950 rounded-l-2xl border-l border-y border-slate-100 uppercase tracking-tighter">Primary Focus</td>
+            <td class="px-8 py-6 text-center text-slate-500 border-y border-slate-100">Discipline & Motor Skills</td>
+            <td class="px-8 py-6 text-center text-slate-500 border-y border-slate-100">Fitness & Defense</td>
+            <td class="px-8 py-6 text-center text-slate-500 border-y border-r border-slate-100 rounded-r-2xl font-bold">Medals & Rank</td>
+          </tr>
+          <tr class="bg-white shadow-sm rounded-2xl">
+            <td class="px-8 py-6 font-black text-slate-950 rounded-l-2xl border-l border-y border-slate-100 uppercase tracking-tighter">Certification</td>
+            <td class="px-8 py-6 text-center text-blue-600 border-y border-slate-100"><i class="bi bi-check-circle-fill"></i></td>
+            <td class="px-8 py-6 text-center text-blue-600 border-y border-slate-100"><i class="bi bi-check-circle-fill"></i></td>
+            <td class="px-8 py-6 text-center text-blue-600 border-y border-r border-slate-100 rounded-r-2xl"><i class="bi bi-check-circle-fill"></i></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="mt-20 flex flex-col items-center">
+      <div class="p-1 w-full max-w-2xl bg-gradient-to-r from-transparent via-slate-200 to-transparent mb-12"></div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center w-full">
+        <div class="text-left">
+          <h3 class="text-3xl font-black text-slate-950 uppercase tracking-tighter mb-4">Start your trial week.</h3>
+          <p class="text-slate-500 text-sm leading-relaxed">Experience any program for 7 days. No long-term contracts, just pure training.</p>
+        </div>
+        <div class="flex flex-col sm:flex-row gap-4 md:justify-end">
+          <a href="program-details.html" class="px-10 py-5 bg-slate-950 text-white font-black uppercase tracking-widest text-xs rounded-full hover:bg-blue-600 transition-all text-center">
+            Enroll Now
+          </a>
+          <a href="program-details.html" class="px-10 py-5 border border-slate-200 text-slate-950 font-black uppercase tracking-widest text-xs rounded-full hover:border-blue-600 transition-all text-center">
+            View more
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+  <!-- FOOTER -->
+    <div id="footer"></div>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Poppins', 'ui-sans-serif', 'system-ui'],
+          },
+        },
+      },
+    }
+  </script>
+  <script src="navbar.js"></script>
+  <script src="footer.js"></script>
+</body>
+
+</html>

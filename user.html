@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard - Daksha Martial</title>
+    <link rel="icon" href="images/logo.jpg">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script>
+        tailwind.config = { darkMode: 'class' }
+    </script>
+    <style>
+        .page-content { animation: fadeIn 0.3s ease-in-out; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        .hidden { display: none; }
+    </style>
+</head>
+
+<body class="bg-slate-50 dark:bg-slate-900 font-sans transition-all duration-300">
+
+    <div class="flex h-screen overflow-hidden">
+
+        <div id="overlay" class="fixed inset-0 bg-black/50 hidden z-40 lg:hidden"></div>
+
+        <aside id="sidebar" class="fixed lg:static inset-y-0 left-0 w-72 bg-blue-900 text-white flex flex-col transform -translate-x-full lg:translate-x-0 transition-transform duration-300 z-50 shadow-xl border-r border-blue-800">
+            <div class="p-6 flex justify-between items-center">
+                 <h1 class="text-xl font-bold text-white flex items-center">
+  <a href="index.html">Daksha Martial</a>
+</h1>
+                <button id="closeSidebar" class="lg:hidden text-xl"><i class="bi bi-x-lg"></i></button>
+            </div>
+
+            <nav class="flex-1 p-4 space-y-2 text-sm">
+                <a href="#" onclick="showPage('dashboard')" class="nav-link block px-4 py-3 rounded-xl bg-blue-700 text-white font-semibold cursor-pointer">
+                    <i class="bi bi-person-badge-fill mr-2"></i> My Dashboard
+                </a>
+                <a href="#" onclick="showPage('schedule')" class="nav-link block px-4 py-3 rounded-xl hover:bg-blue-700 hover:text-white transition cursor-pointer text-blue-100">
+                    <i class="bi bi-calendar-week-fill mr-2"></i> Class Schedule
+                </a>
+                <a href="#" onclick="showPage('progress')" class="nav-link block px-4 py-3 rounded-xl hover:bg-blue-700 hover:text-white transition cursor-pointer text-blue-100">
+                    <i class="bi bi-bar-chart-fill mr-2"></i> Belt Progress
+                </a>
+                <a href="#" onclick="showPage('billing')" class="nav-link block px-4 py-3 rounded-xl hover:bg-blue-700 hover:text-white transition cursor-pointer text-blue-100">
+                    <i class="bi bi-credit-card-fill mr-2"></i> Billing & Gear
+                </a>
+    
+                <a href="login.html" class="block px-4 py-3 rounded-xl hover:bg-blue-700 hover:text-white transition text-blue-100 mt-8 border border-blue-700/50">
+                    <i class="bi bi-box-arrow-left mr-2"></i> Logout
+                </a>
+            </nav>
+            
+             <div class="lg:hidden px-4 pb-4 space-y-2">
+                <button id="themeBtnMobile"
+                    class="w-full flex items-center gap-2 px-4 py-3 rounded-xl hover:bg-blue-700 hover:text-white transition text-blue-100">
+                    <i id="themeIconMobile" class="bi bi-moon-fill"></i>
+                    Dark Mode
+                </button>
+                <button id="rtlBtnMobile"
+                    class="w-full flex items-center gap-2 px-4 py-3 rounded-xl hover:bg-blue-700 hover:text-white transition text-blue-100">
+                    <i class="bi bi-arrow-left-right"></i>
+                    RTL Mode
+                </button>
+            </div>
+
+            <div class="p-5 border-t border-blue-800 flex items-center gap-3 bg-blue-950/50">
+                <div class="w-12 h-12 rounded-full border-2 border-blue-400 bg-slate-800 flex items-center justify-center font-bold text-white overflow-hidden">
+                    <img src="https://ui-avatars.com/api/?name=Arjun+Kumar&background=1e293b&color=fff" alt="User">
+                </div>
+                <div>
+                    <p class="font-semibold text-white">Arjun Kumar</p>
+                    <p class="text-[10px] font-bold uppercase tracking-widest text-blue-300 flex items-center gap-1">
+                        <span class="w-2 h-2 bg-blue-500 rounded-sm"></span> Blue Belt
+                    </p>
+                </div>
+            </div>
+        </aside>
+
+        <div class="flex-1 flex flex-col">
+
+            <header class="bg-white dark:bg-slate-800 shadow-sm px-6 py-4 flex justify-between items-center border-b dark:border-slate-700">
+                <h1 id="headerTitle" class="text-xl font-bold text-slate-800 dark:text-blue-400">My Dashboard</h1>
+                <button id="openSidebar" class="lg:hidden text-2xl text-blue-700 dark:text-blue-400"><i class="bi bi-list"></i></button>
+                <div class="hidden lg:flex gap-3">
+                    <button id="themeBtnDesktop" class="px-3 py-2 rounded-lg border dark:border-slate-600 text-blue-700 dark:text-blue-400 hover:bg-slate-50 dark:hover:bg-slate-700 transition">
+                        <i id="themeIconDesktop" class="bi bi-moon-fill"></i>
+                    </button>
+                    <button id="rtlBtnDesktop" class="px-3 py-2 rounded-lg border dark:border-slate-600 text-blue-700 dark:text-blue-400 hover:bg-slate-50 dark:hover:bg-slate-700 transition">
+                        <i class="bi bi-arrow-left-right"></i>
+                    </button>
+                </div>
+            </header>
+
+            <main class="p-3 sm:p-6 overflow-y-auto space-y-6 text-slate-800 dark:text-slate-100">
+
+                <div id="page-dashboard" class="page-content space-y-6">
+    
+                    <div class="bg-gradient-to-r from-blue-900 to-blue-600 text-white p-6 sm:p-10 rounded-3xl shadow-lg relative overflow-hidden">
+                        <div class="relative z-10">
+                            <span class="text-blue-200 font-bold uppercase tracking-widest text-[10px] mb-2 block">Welcome Back</span>
+                            <h2 class="text-3xl sm:text-4xl font-black uppercase tracking-tight">Stay Focused, Arjun.</h2>
+                            <p class="text-sm sm:text-base opacity-90 mt-3 max-w-xl font-medium">
+                                Your next class is <span class="font-bold underline">Advanced Sparring</span> at 18:00 today. 
+                                You are 3 classes away from your next evaluation requirement.
+                            </p>
+                            <div class="mt-8 flex gap-3">
+                                <button class="bg-white text-blue-900 px-6 py-3 rounded-xl text-xs font-black uppercase tracking-widest shadow-md hover:scale-105 transition transform">Check In Now</button>
+                            </div>
+                        </div>
+                        <i class="bi bi-yin-yang absolute right-[-40px] top-[-40px] text-white/5 text-[250px] rotate-45"></i>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                        <div class="bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-sm border-l-4 border-blue-600">
+                            <h2 class="text-3xl font-black text-slate-900 dark:text-white">42</h2>
+                            <p class="text-xs text-slate-500 uppercase tracking-widest font-bold mt-1">Classes Attended</p>
+                        </div>
+                        <div class="bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-sm border-l-4 border-blue-400">
+                            <h2 class="text-3xl font-black text-slate-900 dark:text-white">Blue</h2>
+                            <p class="text-xs text-slate-500 uppercase tracking-widest font-bold mt-1">Current Rank</p>
+                        </div>
+                        <div class="bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-sm border-l-4 border-slate-400">
+                            <h2 class="text-3xl font-black text-slate-900 dark:text-white">6</h2>
+                            <p class="text-xs text-slate-500 uppercase tracking-widest font-bold mt-1">Sparring Wins</p>
+                        </div>
+                        <div class="bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-sm border-l-4 border-green-500">
+                            <h2 class="text-3xl font-black text-slate-900 dark:text-white">12 Days</h2>
+                            <p class="text-xs text-slate-500 uppercase tracking-widest font-bold mt-1">Current Streak</p>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                        <div class="bg-white dark:bg-slate-800 p-6 rounded-3xl shadow-sm">
+                            <div class="flex justify-between items-center mb-6">
+                                <h3 class="font-bold text-lg uppercase tracking-wide">Upcoming Schedule</h3>
+                                <button class="text-blue-600 dark:text-blue-400 text-xs font-bold uppercase tracking-widest hover:underline" onclick="showPage('schedule')">View All</button>
+                            </div>
+                            
+                            <div class="space-y-4">
+                                <div class="flex items-center gap-4 p-4 border dark:border-slate-700 rounded-2xl bg-blue-50 dark:bg-slate-700/30">
+                                    <div class="w-14 h-14 bg-blue-600 text-white rounded-xl flex flex-col items-center justify-center shadow-md">
+                                        <span class="text-[10px] font-bold uppercase">Today</span>
+                                        <span class="text-lg font-black leading-none">18</span>
+                                    </div>
+                                    <div class="flex-1">
+                                        <p class="font-bold text-sm text-slate-900 dark:text-white">Advanced Sparring</p>
+                                        <p class="text-xs text-slate-500 font-medium">18:00 - 19:30 • Master Raghavan</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-4 p-4 border dark:border-slate-700 rounded-2xl hover:bg-slate-50 dark:hover:bg-slate-700/30 transition">
+                                    <div class="w-14 h-14 bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 rounded-xl flex flex-col items-center justify-center">
+                                        <span class="text-[10px] font-bold uppercase">Wed</span>
+                                        <span class="text-lg font-black leading-none">20</span>
+                                    </div>
+                                    <div class="flex-1">
+                                        <p class="font-bold text-sm text-slate-900 dark:text-white">Conditioning & Forms</p>
+                                        <p class="text-xs text-slate-500 font-medium">17:00 - 18:30 • Inst. Karthik</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-white dark:bg-slate-800 p-6 rounded-3xl shadow-sm">
+                            <h3 class="font-bold text-lg mb-6 uppercase tracking-wide">Recent Achievements</h3>
+                            <div class="space-y-5">
+                                <div class="flex items-start gap-4">
+                                    <div class="w-10 h-10 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center mt-1">
+                                        <i class="bi bi-award-fill"></i>
+                                    </div>
+                                    <div>
+                                        <p class="font-bold text-slate-900 dark:text-white">Promoted to Blue Belt</p>
+                                        <p class="text-xs text-slate-500 mt-1">Completed Taegeuk 4 Jang and broke 2 boards. Excellent technique demonstrated.</p>
+                                        <p class="text-[10px] text-slate-400 font-bold uppercase tracking-widest mt-2">2 Weeks Ago</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-4">
+                                    <div class="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 flex items-center justify-center mt-1">
+                                        <i class="bi bi-fire"></i>
+                                    </div>
+                                    <div>
+                                        <p class="font-bold text-slate-900 dark:text-white">10-Day Streak Reached</p>
+                                        <p class="text-xs text-slate-500 mt-1">Consistent attendance logged. Keep up the discipline.</p>
+                                        <p class="text-[10px] text-slate-400 font-bold uppercase tracking-widest mt-2">1 Month Ago</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="page-schedule" class="page-content hidden space-y-6">
+                    <h2 class="text-xl font-bold uppercase tracking-wide mb-4">Book a Class</h2>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                        <div class="bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-700">
+                            <span class="bg-blue-100 text-blue-700 text-[10px] px-2 py-1 rounded font-bold uppercase tracking-widest">Taekwondo</span>
+                            <h4 class="font-bold text-lg mt-3 text-slate-900 dark:text-white">Advanced Sparring</h4>
+                            <p class="text-sm text-slate-500 font-medium mt-1 mb-6"><i class="bi bi-clock mr-1"></i> Today, 18:00 - 19:30</p>
+                            <button class="w-full bg-slate-100 dark:bg-slate-700 text-slate-400 py-3 rounded-xl text-xs font-bold uppercase cursor-not-allowed">Already Booked</button>
+                        </div>
+                        
+                        <div class="bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-700">
+                            <span class="bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 text-[10px] px-2 py-1 rounded font-bold uppercase tracking-widest">Silambam</span>
+                            <h4 class="font-bold text-lg mt-3 text-slate-900 dark:text-white">Stick Mechanics</h4>
+                            <p class="text-sm text-slate-500 font-medium mt-1 mb-6"><i class="bi bi-clock mr-1"></i> Tomorrow, 07:00 - 08:30</p>
+                            <button class="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-xl text-xs font-bold uppercase tracking-widest transition">Book Slot</button>
+                        </div>
+
+                        <div class="bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-700">
+                            <span class="bg-orange-100 text-orange-700 text-[10px] px-2 py-1 rounded font-bold uppercase tracking-widest">Conditioning</span>
+                            <h4 class="font-bold text-lg mt-3 text-slate-900 dark:text-white">Warrior Fitness</h4>
+                            <p class="text-sm text-slate-500 font-medium mt-1 mb-6"><i class="bi bi-clock mr-1"></i> Thursday, 19:00 - 20:00</p>
+                            <button class="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-xl text-xs font-bold uppercase tracking-widest transition">Book Slot</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="page-progress" class="page-content hidden space-y-6">
+                    <div class="bg-white dark:bg-slate-800 p-8 rounded-3xl shadow-sm border border-slate-100 dark:border-slate-700">
+                        <div class="text-center mb-10">
+                            <h3 class="text-xl font-bold uppercase tracking-wide text-slate-900 dark:text-white">Path to Red Belt</h3>
+                            <p class="text-sm text-slate-500 mt-2">Master these requirements to qualify for your next grading.</p>
+                        </div>
+
+                        <div class="relative max-w-2xl mx-auto mb-16">
+                            <div class="absolute top-1/2 -translate-y-1/2 left-0 w-full h-2 bg-slate-100 dark:bg-slate-700 rounded-full"></div>
+                            <div class="absolute top-1/2 -translate-y-1/2 left-0 w-[65%] h-2 bg-blue-600 rounded-full"></div>
+                            
+                            <div class="relative flex justify-between">
+                                <div class="w-10 h-10 bg-blue-600 rounded-full border-4 border-white dark:border-slate-800 shadow-md relative group"><span class="absolute -bottom-6 left-1/2 -translate-x-1/2 text-[10px] font-bold text-slate-500 hidden group-hover:block">Start</span></div>
+                                <div class="w-10 h-10 bg-blue-600 rounded-full border-4 border-white dark:border-slate-800 shadow-md relative group"><span class="absolute -bottom-6 left-1/2 -translate-x-1/2 text-[10px] font-bold text-slate-500 hidden group-hover:block">Forms</span></div>
+                                <div class="w-10 h-10 bg-white dark:bg-slate-800 rounded-full border-4 border-slate-200 dark:border-slate-600 shadow-md relative group"><span class="absolute -bottom-6 left-1/2 -translate-x-1/2 text-[10px] font-bold text-slate-500 hidden group-hover:block">Sparring</span></div>
+                                <div class="w-10 h-10 bg-red-600 rounded-full border-4 border-white dark:border-slate-800 shadow-md relative group"><span class="absolute -bottom-6 left-1/2 -translate-x-1/2 text-[10px] font-bold text-slate-500 hidden group-hover:block">Red Belt</span></div>
+                            </div>
+                        </div>
+
+                        <div class="grid md:grid-cols-3 gap-6">
+                            <div class="p-5 bg-slate-50 dark:bg-slate-700/30 rounded-2xl border border-slate-100 dark:border-slate-700">
+                                <div class="flex justify-between items-center mb-3">
+                                    <h4 class="font-bold text-slate-900 dark:text-white">Poomsae (Forms)</h4>
+                                    <i class="bi bi-check-circle-fill text-green-500 text-lg"></i>
+                                </div>
+                                <p class="text-xs text-slate-500">Taegeuk 5 Jang mastered. Form is sharp and precise.</p>
+                            </div>
+                            <div class="p-5 bg-slate-50 dark:bg-slate-700/30 rounded-2xl border border-slate-100 dark:border-slate-700">
+                                <div class="flex justify-between items-center mb-3">
+                                    <h4 class="font-bold text-slate-900 dark:text-white">Kyorugi (Sparring)</h4>
+                                    <i class="bi bi-check-circle-fill text-green-500 text-lg"></i>
+                                </div>
+                                <p class="text-xs text-slate-500">Completed 10 hours of mandatory sparring sessions.</p>
+                            </div>
+                            <div class="p-5 bg-white dark:bg-slate-800 rounded-2xl border-2 border-dashed border-blue-300 dark:border-blue-700">
+                                <div class="flex justify-between items-center mb-3">
+                                    <h4 class="font-bold text-slate-900 dark:text-white">Kyokpa (Breaking)</h4>
+                                    <i class="bi bi-circle text-slate-300 dark:text-slate-600 text-lg"></i>
+                                </div>
+                                <p class="text-xs text-slate-500">Needs work. Must successfully execute a spinning hook kick break.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="page-billing" class="page-content hidden space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-gradient-to-br from-slate-900 to-slate-800 text-white p-8 rounded-3xl shadow-lg border border-slate-700">
+                            <div class="flex justify-between items-start mb-8">
+                                <div>
+                                    <p class="text-[10px] font-bold uppercase tracking-widest text-slate-400">Current Plan</p>
+                                    <h3 class="text-2xl font-black uppercase mt-1">Warrior Pro</h3>
+                                </div>
+                                <span class="bg-green-500/20 text-green-400 border border-green-500/50 px-3 py-1 rounded text-[10px] font-bold uppercase tracking-widest">Active</span>
+                            </div>
+                            <p class="text-3xl font-black">$120 <span class="text-sm text-slate-400 font-normal">/ month</span></p>
+                            <p class="text-xs text-slate-400 mt-2">Next billing date: Oct 15, 2024</p>
+                            
+                            <div class="mt-8 pt-6 border-t border-slate-700">
+                                <p class="text-xs font-medium"><i class="bi bi-credit-card mr-2"></i> Visa ending in **** 4242</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-white dark:bg-slate-800 p-8 rounded-3xl shadow-sm border border-slate-100 dark:border-slate-700">
+                            <h4 class="font-bold uppercase tracking-wide text-slate-900 dark:text-white mb-6">Recent Transactions</h4>
+                            <div class="space-y-4">
+                                <div class="flex justify-between items-center py-3 border-b border-slate-50 dark:border-slate-700">
+                                    <div>
+                                        <p class="font-bold text-sm text-slate-900 dark:text-white">Monthly Membership</p>
+                                        <p class="text-xs text-slate-500 mt-0.5">Sep 15, 2024</p>
+                                    </div>
+                                    <p class="font-bold text-slate-900 dark:text-white">$120.00</p>
+                                </div>
+                                <div class="flex justify-between items-center py-3 border-b border-slate-50 dark:border-slate-700">
+                                    <div>
+                                        <p class="font-bold text-sm text-slate-900 dark:text-white">Pro Sparring Gear Set</p>
+                                        <p class="text-xs text-slate-500 mt-0.5">Aug 22, 2024</p>
+                                    </div>
+                                    <p class="font-bold text-slate-900 dark:text-white">$85.00</p>
+                                </div>
+                            </div>
+                            <button class="w-full mt-6 text-blue-600 dark:text-blue-400 text-xs font-bold uppercase tracking-widest hover:underline">Download Invoices</button>
+                        </div>
+                    </div>
+                </div>
+
+            </main>
+        </div>
+    </div>
+
+    <script>
+        const sidebar = document.getElementById("sidebar");
+        const overlay = document.getElementById("overlay");
+        const openBtn = document.getElementById("openSidebar");
+        const closeBtn = document.getElementById("closeSidebar");
+        const headerTitle = document.getElementById("headerTitle");
+
+        const pageTitles = {
+            'dashboard': 'My Dashboard',
+            'schedule': 'Class Schedule',
+            'progress': 'Belt Progress',
+            'billing': 'Billing & Gear'
+        };
+
+        function showPage(pageId) {
+            document.querySelectorAll('.page-content').forEach(p => p.classList.add('hidden'));
+            document.getElementById('page-' + pageId).classList.remove('hidden');
+            headerTitle.innerText = pageTitles[pageId];
+
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('bg-blue-700', 'text-white', 'font-semibold');
+                link.classList.add('hover:bg-blue-700', 'hover:text-white', 'text-blue-100');
+            });
+            event.currentTarget.classList.add('bg-blue-700', 'text-white', 'font-semibold');
+            event.currentTarget.classList.remove('hover:bg-blue-700', 'hover:text-white', 'text-blue-100');
+
+            if (window.innerWidth < 1024) {
+                sidebar.classList.add("-translate-x-full");
+                overlay.classList.add("hidden");
+            }
+        }
+
+        openBtn.onclick = () => { sidebar.classList.remove("-translate-x-full"); overlay.classList.remove("hidden"); };
+        closeBtn.onclick = () => { sidebar.classList.add("-translate-x-full"); overlay.classList.add("hidden"); };
+        overlay.onclick = () => { sidebar.classList.add("-translate-x-full"); overlay.classList.add("hidden"); };
+
+        function toggleTheme() {
+            document.documentElement.classList.toggle("dark");
+            const isDark = document.documentElement.classList.contains("dark");
+            document.getElementById("themeIconDesktop").className = isDark ? "bi bi-sun-fill" : "bi bi-moon-fill";
+            document.getElementById("themeIconMobile").className = isDark ? "bi bi-sun-fill" : "bi bi-moon-fill";
+        }
+
+        document.getElementById("themeBtnDesktop").onclick = toggleTheme;
+        document.getElementById("themeBtnMobile").onclick = toggleTheme;
+
+        // RTL Toggle Logic
+        function toggleRTL() {
+            document.documentElement.dir = document.documentElement.dir === "rtl" ? "ltr" : "rtl";
+        }
+
+        document.getElementById("rtlBtnDesktop").onclick = toggleRTL;
+        document.getElementById("rtlBtnMobile").onclick = toggleRTL;
+
+    </script>
+</body>
+</html>

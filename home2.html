@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home2 - Daksha Martial</title>
+  <link rel="icon" href="images/logo.jpg">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="navbar.css">
+  <link rel="stylesheet" href="footer.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* RTL */
+    .rtl {
+      direction: rtl;
+    }
+    [dir="rtl"] .title {
+  margin-right: 20px !important;
+}
+
+    /* THEME TOGGLE */
+    :root {
+      --home-bg: #ffffff;
+      --text-color: #111111;
+    }
+
+    [data-theme="dark"] {
+      --home-bg: #000000;
+      --text-color: #ffffff;
+    }
+
+    body {
+      background-color: var(--home-bg) !important;
+      color: var(--text-color);
+      transition: background-color 0.4s ease, color 0.4s ease;
+    }
+
+    [data-theme="dark"] section,
+    [data-theme="dark"] .card {
+      background-color: #000000 !important;
+    }
+ [data-theme="dark"] .btn,
+    [data-theme="dark"] .btn1:hover {
+      color: #000000 !important;
+    }
+    [data-theme="dark"] body,
+    [data-theme="dark"] p,
+    [data-theme="dark"] h1,
+    [data-theme="dark"] h2,
+    [data-theme="dark"] h3,
+    [data-theme="dark"] h4,
+    [data-theme="dark"] h5,
+    [data-theme="dark"] h6,
+    [data-theme="dark"] span,
+    [data-theme="dark"] li,
+    [data-theme="dark"] a,
+    [data-theme="dark"] label,
+    [data-theme="dark"] small,
+    [data-theme="dark"] strong,
+    [data-theme="dark"] .title {
+      color: #ffffff !important;
+    }
+  </style>
+</head>
+
+<body class="font-sans">
+  <!-- navbar -->
+  <div id="navbar"></div>
+  <!-- HERO BANNER -->
+<section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+  
+  <div class="absolute inset-0 z-0">
+    <img src="images/bg2.avif" 
+         alt="Martial Arts Background" 
+         class="w-full h-full object-cover">
+    <div class="absolute inset-0 bg-slate-900/60"></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-slate-900/40"></div>
+  </div>
+
+  <div class="container mx-auto px-6 relative z-10">
+    <div class="max-w-4xl mx-auto text-center">
+      
+      <h1 class="text-4xl sm:text-6xl lg:text-8xl font-bold text-white leading-tight mb-8 mt-10">
+        Mastery is a <br>
+        <span class="text-white">Lifelong Path</span>
+      </h1>
+      
+      <p class="text-slate-200 text-lg md:text-xl mb-12 leading-relaxed max-w-2xl mx-auto">
+        From the ancient art of Silambam to modern Kickboxing, we forge champions through discipline, sweat, and traditional wisdom.
+      </p>
+
+      <div class="flex flex-col sm:flex-row items-center gap-5 justify-center">
+        <a href="achieve.html" class="btn1 w-full sm:w-auto px-12 py-4 border-2 border-white/30 hover:bg-white hover:text-slate-900 text-white font-bold rounded-lg transition-all uppercase tracking-wide">
+          View Our Achievements
+        </a>
+      </div>
+
+      <div class="mt-20 flex flex-wrap items-center justify-center gap-8 md:gap-16 opacity-80">
+        <div class="text-center">
+          <p class="text-3xl font-bold text-white">15+</p>
+          <p class="text-[10px] uppercase tracking-[0.2em] text-blue-400 font-bold mt-1">Masters</p>
+        </div>
+        <div class="hidden sm:block h-8 w-px bg-white/20"></div>
+        <div class="text-center">
+          <p class="text-3xl font-bold text-white">500+</p>
+          <p class="text-[10px] uppercase tracking-[0.2em] text-blue-400 font-bold mt-1">Students</p>
+        </div>
+        <div class="hidden sm:block h-8 w-px bg-white/20"></div>
+        <div class="text-center">
+          <p class="text-3xl font-bold text-white">10+</p>
+          <p class="text-[10px] uppercase tracking-[0.2em] text-blue-400 font-bold mt-1">Art Forms</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- SECTION1 -->
+ <section id="schedule" class="bg-white py-24 px-6">
+  <div class="max-w-7xl mx-auto">
+    
+    <div class="text-center mb-16">
+      <span class="text-blue-600 font-bold uppercase text-xs tracking-[0.2em] mb-3 block">Timings</span>
+      <h2 class="text-4xl md:text-5xl font-black text-slate-900 uppercase">Weekly <span class="text-blue-600">Schedule</span></h2>
+      <p class="text-slate-500 mt-4 max-w-lg mx-auto text-sm">Find the perfect slot that fits your routine. All sessions are led by certified masters.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      
+      <div class="card bg-slate-50 rounded-3xl p-8 border border-slate-100 hover:border-blue-500 transition-all duration-300 group">
+        <div class="flex items-center gap-4 mb-8">
+          <div class="w-12 h-12 bg-white rounded-2xl flex items-center justify-center text-blue-600 shadow-sm group-hover:bg-blue-600 group-hover:text-white transition-colors">
+            <i class="bi bi-sunrise-fill text-xl"></i>
+          </div>
+          <h3 class="font-black uppercase text-slate-900">Morning Batch</h3>
+        </div>
+        
+        <ul class="space-y-6">
+          <li class="flex justify-between items-center border-b border-slate-200 pb-4">
+            <span class="text-slate-900 font-bold text-sm uppercase">Silambam</span>
+            <span class="btn bg-blue-100 text-blue-600 text-[10px] font-black px-3 py-1 rounded-full uppercase">06:00 - 07:30</span>
+          </li>
+          <li class="flex justify-between items-center border-b border-slate-200 pb-4">
+            <span class="text-slate-900 font-bold text-sm uppercase">Taekwondo (Jr)</span>
+            <span class="btn bg-slate-200 text-slate-600 text-[10px] font-black px-3 py-1 rounded-full uppercase">07:30 - 08:30</span>
+          </li>
+          <li class="flex justify-between items-center">
+            <span class="text-slate-900 font-bold text-sm uppercase">Karate-Do</span>
+            <span class="btn bg-blue-100 text-blue-600 text-[10px] font-black px-3 py-1 rounded-full uppercase">08:30 - 10:00</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="bg-slate-900 rounded-3xl p-8 border border-blue-600 shadow-2xl shadow-blue-600/20 relative overflow-hidden group">
+        <div class="flex items-center gap-4 mb-8">
+          <div class="w-12 h-12 bg-blue-600 rounded-2xl flex items-center justify-center text-white shadow-sm">
+            <i class="bi bi-moon-stars-fill text-xl"></i>
+          </div>
+          <h3 class="font-black uppercase text-white">Evening Batch</h3>
+        </div>
+        
+        <ul class="space-y-6 text-white">
+          <li class="flex justify-between items-center border-b border-white/10 pb-4">
+            <span class="font-bold text-sm uppercase">Kickboxing</span>
+            <span class="bg-blue-600 text-[10px] font-black px-3 py-1 rounded-full uppercase">17:00 - 18:30</span>
+          </li>
+          <li class="flex justify-between items-center border-b border-white/10 pb-4">
+            <span class="font-bold text-sm uppercase">Taekwondo (CBT)</span>
+            <span class="bg-blue-600 text-[10px] font-black px-3 py-1 rounded-full uppercase">18:30 - 19:45</span>
+          </li>
+          <li class="flex justify-between items-center">
+            <span class="font-bold text-sm uppercase">Silambam</span>
+            <span class="bg-blue-600 text-[10px] font-black px-3 py-1 rounded-full uppercase">19:45 - 21:00</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="card bg-slate-50 rounded-3xl p-8 border border-slate-100 hover:border-blue-500 transition-all duration-300 group">
+        <div class="flex items-center gap-4 mb-8">
+          <div class="w-12 h-12 bg-white rounded-2xl flex items-center justify-center text-blue-600 shadow-sm group-hover:bg-blue-600 group-hover:text-white transition-colors">
+            <i class="bi bi-calendar-event-fill text-xl"></i>
+          </div>
+          <h3 class="font-black uppercase text-slate-900">Weekend Special</h3>
+        </div>
+        
+        <ul class="space-y-6">
+          <li class="flex justify-between items-center border-b border-slate-200 pb-4">
+            <span class="text-slate-900 font-bold text-sm uppercase">Weapon Mastery</span>
+            <span class="btn bg-blue-100 text-blue-600 text-[10px] font-black px-3 py-1 rounded-full uppercase">SAT | 07:00</span>
+          </li>
+          <li class="flex justify-between items-center border-b border-slate-200 pb-4">
+            <span class="text-slate-900 font-bold text-sm uppercase">TKD Poomsae</span>
+            <span class="btn bg-slate-200 text-slate-600 text-[10px] font-black px-3 py-1 rounded-full uppercase">SAT | 17:00</span>
+          </li>
+          <li class="flex justify-between items-center">
+            <span class="text-slate-900 font-bold text-sm uppercase">Sparring Class</span>
+            <span class="btn bg-blue-100 text-blue-600 text-[10px] font-black px-3 py-1 rounded-full uppercase">SUN | 08:00</span>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- SECTION2 -->
+ <section id="about" class="bg-white py-24 px-6 overflow-hidden">
+  <div class="max-w-7xl mx-auto">
+    <div class="flex flex-col lg:flex-row items-center gap-16">
+      
+      <div class="lg:w-1/2 relative">
+        <div class="absolute -top-6 -left-6 w-24 h-24 border-t-4 border-l-4 border-blue-600 hidden md:block"></div>
+        <div class="absolute -bottom-6 -right-6 w-24 h-24 border-b-4 border-r-4 border-blue-600 hidden md:block"></div>
+        
+        <div class="relative rounded-2xl overflow-hidden shadow-2xl">
+          <img src="images/img2.avif" 
+               alt="Master Instructor" 
+               class="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-700">
+          
+          <div class="absolute bottom-6 left-6 bg-blue-600 text-white p-6 rounded-xl shadow-xl">
+            <p class="text-4xl font-black mb-1 leading-none">20+</p>
+            <p class="text-[10px] font-bold uppercase tracking-widest leading-tight">Years of<br>Instruction</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="lg:w-1/2 space-y-8">
+        <div>
+          <span class="text-blue-600 font-bold uppercase text-xs tracking-[0.2em] mb-3 block">Our Philosophy</span>
+          <h2 class="text-4xl md:text-5xl font-black text-slate-900 uppercase leading-tight mb-6">
+            Beyond the <span class="text-blue-600">Physical</span>
+          </h2>
+          <p class="text-slate-600 text-lg leading-relaxed">
+            At Daksha Martial, we believe that true combat mastery is 10% technique and 90% character. Whether you are wielding a Silambam staff or perfecting a Taekwondo roundhouse, our training focuses on the internal discipline required to remain calm under pressure.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div class="flex items-start gap-4">
+            <div class="bg-blue-50 p-3 rounded-lg text-blue-600">
+              <i class="bi bi-shield-check text-xl"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-slate-900 uppercase text-sm">Authentic Lineage</h4>
+              <p class="text-slate-500 text-xs mt-1">Direct instruction from verified traditional masters.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4">
+            <div class="bg-blue-50 p-3 rounded-lg text-blue-600">
+              <i class="bi bi-graph-up-arrow text-xl"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-slate-900 uppercase text-sm">Modern Growth</h4>
+              <p class="text-slate-500 text-xs mt-1">Scientific conditioning paired with ancient arts.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="pt-4">
+          <p class="text-slate-900 font-black uppercase text-xl mb-1">— MASTER RAGHAVAN</p>
+          <p class="text-blue-600 font-bold text-xs uppercase tracking-widest">Founder & Chief Instructor</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- SECTION3 -->
+ <section id="gallery" class="bg-white py-24 px-6">
+  <div class="max-w-7xl mx-auto">
+    
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8">
+      <div class="max-w-2xl">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="h-1 w-12 bg-blue-600"></div>
+          <span class="text-blue-600 font-bold uppercase text-xs tracking-[0.3em]">Training Experience</span>
+        </div>
+        <h2 class="text-5xl md:text-6xl font-black text-slate-900 uppercase leading-none">
+          Training <span class="text-blue-600">Grounds</span>
+        </h2>
+      </div>
+      <div class="flex gap-4">
+        <a href="contact.html" class="px-8 py-4 bg-slate-900 text-white font-black uppercase text-xs tracking-widest hover:bg-blue-600 transition-all rounded-lg">
+          Book a Class
+        </a>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-12 auto-rows-[150px] md:auto-rows-[200px] gap-4 md:gap-6">
+      
+      <div class="col-span-12 md:col-span-8 row-span-2 relative group overflow-hidden rounded-2xl shadow-lg">
+        <img src="images/img3.avif" 
+             class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105">
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent p-8 flex flex-col justify-end">
+          <span class="text-blue-400 font-bold uppercase text-[10px] tracking-widest mb-2">Combat Excellence</span>
+          <h3 class="text-white text-2xl font-black uppercase">Advanced Taekwondo Sparring</h3>
+        </div>
+      </div>
+
+      <div class="col-span-6 md:col-span-4 row-span-1 relative group overflow-hidden rounded-2xl shadow-lg">
+        <img src="images/img6.webp" 
+             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+        <div class="absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+           <span class="text-white font-black uppercase text-xs tracking-widest border border-white/40 px-4 py-2">View Detail</span>
+        </div>
+      </div>
+
+      <div class="col-span-6 md:col-span-4 row-span-1 relative group overflow-hidden rounded-2xl shadow-lg">
+        <img src="images/img7.webp" 
+             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+        <div class="absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+           <span class="text-white font-black uppercase text-xs tracking-widest border border-white/40 px-4 py-2">Our Classes</span>
+        </div>
+      </div>
+
+      <div class="col-span-12 md:col-span-4 row-span-2 relative group overflow-hidden rounded-2xl shadow-lg">
+        <img src="images/img4.jpg" 
+             class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105">
+        <div class="absolute inset-0 bg-gradient-to-t from-blue-900/80 via-transparent to-transparent p-6 flex flex-col justify-end">
+          <h3 class="text-white text-xl font-black uppercase leading-tight">Elite Training<br>Facility</h3>
+        </div>
+      </div>
+
+      <div class="col-span-6 md:col-span-4 row-span-2 relative group overflow-hidden rounded-2xl shadow-lg">
+        <img src="images/img5.jpg" 
+             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+      </div>
+
+      <div class="col-span-6 md:col-span-4 row-span-1 bg-blue-600 rounded-2xl p-8 flex flex-col justify-center items-center text-center">
+        <i class="bi bi-people-fill text-3xl text-white mb-4"></i>
+        <p class="text-white font-black uppercase text-sm tracking-widest">500+ Warriors<br>Trained</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- SECTION4 -->
+ <section id="masters" class="bg-slate-50 py-24 px-6">
+  <div class="max-w-7xl mx-auto">
+    
+    <div class="text-center mb-16">
+      <span class="text-blue-600 font-bold uppercase text-xs tracking-[0.3em] mb-3 block">The Lineage</span>
+      <h2 class="text-4xl md:text-5xl font-black text-slate-900 uppercase">Meet the <span class="text-blue-600">Masters</span></h2>
+      <div class="h-1.5 w-20 bg-blue-600 mx-auto mt-6"></div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      
+      <div class="card group bg-white rounded-3xl overflow-hidden shadow-lg border border-slate-100 hover:shadow-2xl transition-all duration-500">
+        <div class="relative h-96 overflow-hidden">
+          <img src="images/team1.jpg" 
+               alt="Taekwondo Master" 
+               class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent"></div>
+          <div class="absolute bottom-6 left-6">
+            <h4 class="text-white font-black text-2xl uppercase leading-tight">Master Arjun</h4>
+            <p class="text-blue-400 font-bold uppercase text-xs tracking-widest">5th Dan Black Belt | TKD</p>
+          </div>
+        </div>
+        <div class="p-8">
+          <p class="text-slate-600 text-sm leading-relaxed mb-6">
+            Specializing in Olympic-style Taekwondo and high-performance striking. Over 15 years of experience in forging national-level athletes.
+          </p>
+          <div class="flex gap-4">
+            <a href="#" class="text-slate-400 hover:text-blue-600 transition-colors text-lg"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="text-slate-400 hover:text-blue-600 transition-colors text-lg"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card group bg-white rounded-3xl overflow-hidden shadow-lg border border-slate-100 hover:shadow-2xl transition-all duration-500">
+        <div class="relative h-96 overflow-hidden">
+          <img src="images/team2.jpg" 
+               alt="Silambam Master" 
+               class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent"></div>
+          <div class="absolute bottom-6 left-6">
+            <h4 class="text-white font-black text-2xl uppercase leading-tight">Aasaan Prabhu</h4>
+            <p class="text-blue-400 font-bold uppercase text-xs tracking-widest">Traditional Silambam Expert</p>
+          </div>
+        </div>
+        <div class="p-8">
+          <p class="text-slate-600 text-sm leading-relaxed mb-6">
+            Guardian of the ancient stick-fencing arts. His teaching focuses on fluid movement, weapon coordination, and mental fortitude.
+          </p>
+          <div class="flex gap-4">
+            <a href="#" class="text-slate-400 hover:text-blue-600 transition-colors text-lg"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="text-slate-400 hover:text-blue-600 transition-colors text-lg"><i class="bi bi-twitter-x"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-blue-600 rounded-3xl p-10 flex flex-col justify-center items-center text-center text-white relative overflow-hidden group">
+        <i class="bi bi-shield-shaded absolute -right-4 -bottom-4 text-white/10 text-9xl"></i>
+        
+        <h3 class="text-3xl font-black uppercase mb-6 relative z-10">Start Your Journey Today</h3>
+        <p class="text-blue-100 mb-10 text-sm font-medium relative z-10 uppercase tracking-wide">
+          Private training and group sessions available with all our Masters.
+        </p>
+        <a href="sign.html" class="card w-full py-4 bg-white text-blue-600 font-black uppercase text-xs tracking-[0.2em] rounded-xl hover:bg-slate-900 hover:text-white transition-all relative z-10">
+          Apply for Trial
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- SECTION5 -->
+ <section class="bg-slate-900 py-20 px-6 relative overflow-hidden">
+  <div class="absolute top-0 right-0 w-64 h-64 bg-blue-600/10 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl"></div>
+  <div class="absolute bottom-0 left-0 w-96 h-96 bg-blue-900/20 rounded-full translate-y-1/2 -translate-x-1/2 blur-3xl"></div>
+
+  <div class="max-w-5xl mx-auto relative z-10 text-center">
+    <div class="inline-block px-4 py-1 border border-blue-500/30 rounded-full bg-blue-500/10 mb-6">
+      <span class="text-blue-400 text-[10px] font-black uppercase tracking-[0.3em]">Limited Slots Available</span>
+    </div>
+    
+    <h2 class="text-4xl md:text-6xl font-black text-white uppercase mb-8 leading-tight">
+      Stop Waiting. <br>
+      <span class="text-blue-600">Start Forging.</span>
+    </h2>
+    
+    <p class="text-slate-400 text-lg mb-12 max-w-2xl mx-auto font-medium">
+      Join Chennai's premier academy for Silambam, Taekwondo, and traditional combat. Your first session is completely free.
+    </p>
+
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
+      <a href="contact.html" class="btn1 group relative inline-flex items-center gap-3 px-10 py-5 bg-blue-600 text-white font-black uppercase text-sm tracking-widest rounded-xl hover:bg-white hover:text-slate-900 transition-all duration-300 shadow-2xl shadow-blue-600/30">
+        Claim Free Trial
+        <i class="bi bi-chevron-right group-hover:translate-x-1 transition-transform"></i>
+      </a>
+
+      <a href="https://wa.me/919876543210" class="flex items-center gap-3 text-white font-black uppercase text-sm tracking-widest hover:text-blue-500 transition-colors">
+        <div class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center border border-white/10">
+          <i class="bi bi-whatsapp text-xl text-green-500"></i>
+        </div>
+        Chat with a Master
+      </a>
+    </div>
+
+    <div class="mt-12 pt-12 border-t border-white/5 flex flex-wrap justify-center gap-8 opacity-40 grayscale">
+        <div class="flex items-center gap-2">
+            <i class="bi bi-shield-check text-2xl text-white"></i>
+            <span class="text-white text-[10px] font-bold uppercase tracking-widest">Certified Player</span>
+        </div>
+        <div class="flex items-center gap-2">
+            <i class="bi bi-award text-2xl text-white"></i>
+            <span class="text-white text-[10px] font-bold uppercase tracking-widest">National Champions</span>
+        </div>
+    </div>
+  </div>
+</section>
+  <!-- FOOTER -->
+    <div id="footer"></div>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Poppins', 'ui-sans-serif', 'system-ui'],
+          },
+        },
+      },
+    }
+  </script>
+  <script src="navbar.js"></script>
+  <script src="footer.js"></script>
+</body>
+
+</html>
