@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10">
 
       <div class="lg:col-span-2">
-        <h1 class="text-xl font-bold text-white flex items-center gap-3">
+        <h1 class="text-xl font-semibold text-white flex items-center gap-3">
   <a href="index.html">Daksha Martial</a>
 </h1>
 
@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
       </div>
 
       <div>
-        <h3 class="text-lg font-bold mb-5 text-white uppercase tracking-wider">
+        <h3 class="text-lg font-semibold mb-5 text-white uppercase tracking-wider">
           Quick Links
         </h3>
         <ul class="space-y-3 text-blue-100 text-sm font-medium">
@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
       </div>
 
       <div>
-        <h3 class="text-lg font-bold mb-5 text-white uppercase tracking-wider">
+        <h3 class="text-lg font-semibold mb-5 text-white uppercase tracking-wider">
           Programs
         </h3>
         <ul class="space-y-3 text-blue-100 text-sm font-medium">
@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
       </div>
 
       <div>
-        <h3 class="text-lg font-bold mb-5 text-white uppercase tracking-wider">
+        <h3 class="text-lg font-semibold mb-5 text-white uppercase tracking-wider">
           Reach Us
         </h3>
         <ul class="space-y-4 text-blue-100 text-sm">

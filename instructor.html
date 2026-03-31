@@ -6,21 +6,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Instructor - Daksha Martial</title>
   <link rel="icon" href="images/logo.jpg">
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="output.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <link rel="stylesheet" href="navbar.css">
   <link rel="stylesheet" href="footer.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
   <style>
     /* RTL */
     .rtl {
       direction: rtl;
     }
+
     [dir="rtl"] .title {
-  margin-right: 20px !important;
-}
+      margin-right: 20px !important;
+    }
 
     /* THEME TOGGLE */
     :root {
@@ -43,10 +42,12 @@
     [data-theme="dark"] .card {
       background-color: #000000 !important;
     }
- [data-theme="dark"] .btn,
+
+    [data-theme="dark"] .btn,
     [data-theme="dark"] .btn1:hover {
       color: #000000 !important;
     }
+
     [data-theme="dark"] body,
     [data-theme="dark"] p,
     [data-theme="dark"] h1,
@@ -71,253 +72,308 @@
   <!-- navbar -->
   <div id="navbar"></div>
   <!-- HERO BANNER -->
-<section class="relative min-h-screen flex items-center justify-center bg-slate-950 overflow-hidden px-6">
-  
-  <div class="absolute inset-0 z-0">
-    <img src="images/bg6.jpg" 
-         alt="Instructors Background" 
-         class="w-full h-full object-cover opacity-30 filter ">
-  </div>
+  <section class="relative min-h-screen flex items-center justify-center bg-slate-950 overflow-hidden px-6">
 
-  <div class="relative z-10 w-full max-w-4xl mx-auto text-center flex flex-col items-center">
-    
-    
-    <h1 class="text-5xl md:text-7xl lg:text-8xl font-black text-white uppercase tracking-tighter leading-[0.85] mb-8">
-      The Art of <br>
-      <span class="text-blue-600 italic">Mastery.</span>
-    </h1>
-
-    <p class="text-slate-300 text-lg md:text-xl font-medium leading-relaxed max-w-2xl mb-12">
-      Success in martial arts begins with the right guidance. Our instructors represent decades of tradition, discipline, and competitive excellence.
-    </p>
-
-    <div class="flex flex-col sm:flex-row items-center gap-8">
-      <a href="instructor.html" class="btn1 px-12 py-5 bg-blue-600 hover:bg-white hover:text-slate-950 text-white font-black uppercase tracking-widest text-xs rounded-full transition-all duration-500 shadow-2xl shadow-blue-600/20">
-        Meet the Masters
-      </a>
-      
-      <div class="flex items-center gap-4">
-        <div class="flex -space-x-3">
-          <img class="w-10 h-10 rounded-full border-2 border-slate-900 bg-slate-800" src="https://i.pravatar.cc/100?img=11" alt="Master">
-          <img class="w-10 h-10 rounded-full border-2 border-slate-900 bg-slate-800" src="https://i.pravatar.cc/100?img=12" alt="Master">
-          <img class="w-10 h-10 rounded-full border-2 border-slate-900 bg-slate-800" src="https://i.pravatar.cc/100?img=13" alt="Master">
-        </div>
-        <p class="text-slate-400 font-bold uppercase text-[10px] tracking-widest">Global certified <br> Faculty</p>
-      </div>
-    </div>
-  </div>
-
-</section>
-<!-- SECTION1 -->
-<section id="faculty" class="bg-white py-24 px-6">
-  <div class="max-w-7xl mx-auto">
-    
-    <div class="text-center max-w-2xl mx-auto mb-20">
-      <span class="text-blue-600 font-black uppercase text-[10px] tracking-[0.4em] mb-4 block">World Class Faculty</span>
-      <h2 class="text-4xl md:text-5xl font-black text-slate-950 uppercase tracking-tighter mb-6">
-        Champions of <span class="text-blue-600">Discipline.</span>
-      </h2>
-      <div class="w-12 h-1 bg-blue-600 mx-auto"></div>
+    <div class="absolute inset-0 z-0">
+      <img src="images/bg6.jpg" alt="Instructors Background" class="w-full h-full object-cover opacity-30 filter ">
     </div>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-20">
-      
-      <div class="group text-center">
-        <div class="relative aspect-[4/5] overflow-hidden rounded-[2.5rem] bg-slate-100 mb-8 transition-transform duration-500 group-hover:-translate-y-2">
-          <img src="images/team1.jpg" alt="Master Raghavan" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700">
-          <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end justify-center pb-8">
-             <span class="text-white font-black uppercase text-[10px] tracking-widest">View Full Bio</span>
-          </div>
-        </div>
-        <h3 class="text-2xl font-black text-slate-950 uppercase tracking-tight">Master Raghavan</h3>
-        <p class="text-blue-600 font-bold text-[11px] uppercase tracking-widest mt-1 mb-4">7th Dan • Chief Instructor</p>
-        <div class="card inline-flex flex-col gap-2 px-6 py-4 bg-slate-50 rounded-2xl border border-slate-100 w-full group-hover:border-blue-100 transition-colors">
-            <span class="text-[10px] text-slate-400 font-bold uppercase tracking-widest border-b border-slate-200 pb-2">Key Achievements</span>
-            <p class="text-slate-600 text-xs font-semibold leading-relaxed">3x National Gold Medalist<br>Asian Games Representative</p>
-        </div>
-      </div>
+    <div class="relative z-10 w-full max-w-4xl mx-auto text-center flex flex-col items-center">
 
-      <div class="group text-center">
-        <div class="relative aspect-[4/5] overflow-hidden rounded-[2.5rem] bg-slate-100 mb-8 transition-transform duration-500 group-hover:-translate-y-2">
-          <img src="images/team3.avif" alt="Anjali Sharma" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700">
-          <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end justify-center pb-8">
-             <span class="text-white font-black uppercase text-[10px] tracking-widest">View Full Bio</span>
-          </div>
-        </div>
-        <h3 class="text-2xl font-black text-slate-950 uppercase tracking-tight">Anjali Sharma</h3>
-        <p class="text-blue-600 font-bold text-[11px] uppercase tracking-widest mt-1 mb-4">4th Dan • Poomsae Head</p>
-        <div class="card inline-flex flex-col gap-2 px-6 py-4 bg-slate-50 rounded-2xl border border-slate-100 w-full group-hover:border-blue-100 transition-colors">
-            <span class="text-[10px] text-slate-400 font-bold uppercase tracking-widest border-b border-slate-200 pb-2">Key Achievements</span>
-            <p class="text-slate-600 text-xs font-semibold leading-relaxed">Commonwealth Silver (Poomsae)<br>WT International Referee</p>
-        </div>
-      </div>
 
-      <div class="group text-center">
-        <div class="relative aspect-[4/5] overflow-hidden rounded-[2.5rem] bg-slate-100 mb-8 transition-transform duration-500 group-hover:-translate-y-2">
-          <img src="images/team2.jpg" alt="Vikram Seth" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700">
-          <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end justify-center pb-8">
-             <span class="text-white font-black uppercase text-[10px] tracking-widest">View Full Bio</span>
-          </div>
-        </div>
-        <h3 class="text-2xl font-black text-slate-950 uppercase tracking-tight">Vikram Seth</h3>
-        <p class="text-blue-600 font-bold text-[11px] uppercase tracking-widest mt-1 mb-4">5th Dan • Sparring Coach</p>
-        <div class="card inline-flex flex-col gap-2 px-6 py-4 bg-slate-50 rounded-2xl border border-slate-100 w-full group-hover:border-blue-100 transition-colors">
-            <span class="text-[10px] text-slate-400 font-bold uppercase tracking-widest border-b border-slate-200 pb-2">Key Achievements</span>
-            <p class="text-slate-600 text-xs font-semibold leading-relaxed">State Kickboxing Champion<br>12-0 Professional Record</p>
-        </div>
-      </div>
+      <h1 class="text-5xl md:text-7xl lg:text-8xl font-semibold text-white uppercase tracking-tighter leading-[0.85] mb-8">
+        The Art of <br>
+        <span class="text-blue-600">Mastery.</span>
+      </h1>
 
-      <div class="group text-center">
-        <div class="relative aspect-[4/5] overflow-hidden rounded-[2.5rem] bg-slate-100 mb-8 transition-transform duration-500 group-hover:-translate-y-2">
-          <img src="images/team6.avif" alt="David Miller" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700">
-          <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end justify-center pb-8">
-             <span class="text-white font-black uppercase text-[10px] tracking-widest">View Full Bio</span>
-          </div>
-        </div>
-        <h3 class="text-2xl font-black text-slate-950 uppercase tracking-tight">David Miller</h3>
-        <p class="text-blue-600 font-bold text-[11px] uppercase tracking-widest mt-1 mb-4">3rd Dan • Youth Director</p>
-        <div class="card inline-flex flex-col gap-2 px-6 py-4 bg-slate-50 rounded-2xl border border-slate-100 w-full group-hover:border-blue-100 transition-colors">
-            <span class="text-[10px] text-slate-400 font-bold uppercase tracking-widest border-b border-slate-200 pb-2">Key Achievements</span>
-            <p class="text-slate-600 text-xs font-semibold leading-relaxed">Junior Olympic Gold Coach<br>Black Belt Hall of Fame 2022</p>
-        </div>
-      </div>
-
-      <div class="group text-center">
-        <div class="relative aspect-[4/5] overflow-hidden rounded-[2.5rem] bg-slate-100 mb-8 transition-transform duration-500 group-hover:-translate-y-2">
-          <img src="images/team5.avif" alt="Arjun Varma" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700">
-          <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end justify-center pb-8">
-             <span class="text-white font-black uppercase text-[10px] tracking-widest">View Full Bio</span>
-          </div>
-        </div>
-        <h3 class="text-2xl font-black text-slate-950 uppercase tracking-tight">Arjun Varma</h3>
-        <p class="text-blue-600 font-bold text-[11px] uppercase tracking-widest mt-1 mb-4">Security Expert • Krav Maga</p>
-        <div class="card inline-flex flex-col gap-2 px-6 py-4 bg-slate-50 rounded-2xl border border-slate-100 w-full group-hover:border-blue-100 transition-colors">
-            <span class="text-[10px] text-slate-400 font-bold uppercase tracking-widest border-b border-slate-200 pb-2">Key Achievements</span>
-            <p class="text-slate-600 text-xs font-semibold leading-relaxed">Ex-Special Forces Lead Trainer<br>Certified Krav Maga Global</p>
-        </div>
-      </div>
-
-      <div class="group text-center">
-        <div class="relative aspect-[4/5] overflow-hidden rounded-[2.5rem] bg-slate-100 mb-8 transition-transform duration-500 group-hover:-translate-y-2">
-          <img src="images/team4.avif" alt="Sarah Chen" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700">
-          <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end justify-center pb-8">
-             <span class="text-white font-black uppercase text-[10px] tracking-widest">View Full Bio</span>
-          </div>
-        </div>
-        <h3 class="text-2xl font-black text-slate-950 uppercase tracking-tight">Sarah Chen</h3>
-        <p class="text-blue-600 font-bold text-[11px] uppercase tracking-widest mt-1 mb-4">2nd Dan • Asst. Instructor</p>
-        <div class="card inline-flex flex-col gap-2 px-6 py-4 bg-slate-50 rounded-2xl border border-slate-100 w-full group-hover:border-blue-100 transition-colors">
-            <span class="text-[10px] text-slate-400 font-bold uppercase tracking-widest border-b border-slate-200 pb-2">Key Achievements</span>
-            <p class="text-slate-600 text-xs font-semibold leading-relaxed">Regional Collegiate Champion<br>Women's Self-Defense Advocate</p>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-<!-- SECTION2 -->
- <section class="bg-white py-24 px-6 border-t border-slate-100">
-  <div class="max-w-7xl mx-auto">
-    
-    <div class="text-center max-w-2xl mx-auto mb-20">
-      <span class="text-blue-600 font-black uppercase text-[10px] tracking-[0.4em] mb-4 block">Proven Authority</span>
-      <h2 class="text-4xl md:text-5xl font-black text-slate-950 uppercase tracking-tighter mb-6">
-        The <span class="text-blue-600">Lineage.</span>
-      </h2>
-      <p class="text-slate-500 font-medium text-sm leading-relaxed">
-        Our teaching philosophy is passed down through generations of masters, ensuring that every technique remains authentic and effective.
+      <p class="text-slate-300 text-lg md:text-xl font-medium leading-relaxed max-w-2xl mb-12">
+        Success in martial arts begins with the right guidance. Our instructors represent decades of tradition,
+        discipline, and competitive excellence.
       </p>
+
+      <div class="flex flex-col sm:flex-row items-center gap-8">
+        <a href="instructor.html"
+          class="btn1 px-12 py-5 bg-blue-600 hover:bg-white hover:text-slate-950 text-white font-semibold uppercase tracking-widest text-xs rounded-full transition-all duration-500 shadow-2xl shadow-blue-600/20">
+          Meet the Masters
+        </a>
+
+        <div class="flex items-center gap-4">
+          <div class="flex -space-x-3">
+            <img class="w-10 h-10 rounded-full border-2 border-slate-900 bg-slate-800"
+              src="https://i.pravatar.cc/100?img=11" alt="Master">
+            <img class="w-10 h-10 rounded-full border-2 border-slate-900 bg-slate-800"
+              src="https://i.pravatar.cc/100?img=12" alt="Master">
+            <img class="w-10 h-10 rounded-full border-2 border-slate-900 bg-slate-800"
+              src="https://i.pravatar.cc/100?img=13" alt="Master">
+          </div>
+          <p class="text-slate-400 font-semibold uppercase text-[10px] tracking-widest">Global certified <br> Faculty</p>
+        </div>
+      </div>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-20">
-      
-      <div class="card p-10 rounded-[2.5rem] bg-slate-50 border border-slate-100 flex flex-col items-center text-center group hover:border-blue-200 transition-colors">
-        <div class="w-20 h-20 bg-white rounded-2xl shadow-sm flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-          <i class="bi bi-person-workspace text-3xl text-blue-600"></i>
+  </section>
+  <!-- SECTION1 -->
+  <section id="faculty" class="bg-white py-24 px-6">
+    <div class="max-w-7xl mx-auto">
+
+      <div class="text-center max-w-2xl mx-auto mb-20">
+        <span class="text-blue-600 font-semibold uppercase text-[10px] tracking-[0.4em] mb-4 block">World Class
+          Faculty</span>
+        <h2 class="text-4xl md:text-5xl font-semibold text-slate-950 uppercase tracking-tighter mb-6">
+          Champions of <span class="text-blue-600">Discipline.</span>
+        </h2>
+        <div class="w-12 h-1 bg-blue-600 mx-auto"></div>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-20">
+
+        <div class="group text-center">
+          <div
+            class="relative aspect-[4/5] overflow-hidden rounded-[2.5rem] bg-slate-100 mb-8 transition-transform duration-500 group-hover:-translate-y-2">
+            <img src="images/team1.jpg" alt="Master Raghavan"
+              class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700">
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end justify-center pb-8">
+              <span class="text-white font-semibold uppercase text-[10px] tracking-widest">View Full Bio</span>
+            </div>
+          </div>
+          <h3 class="text-2xl font-semibold text-slate-950 uppercase tracking-tight">Master Raghavan</h3>
+          <p class="text-blue-600 font-semibold text-[11px] uppercase tracking-widest mt-1 mb-4">7th Dan • Chief Instructor
+          </p>
+          <div
+            class="card inline-flex flex-col gap-2 px-6 py-4 bg-slate-50 rounded-2xl border border-slate-100 w-full group-hover:border-blue-100 transition-colors">
+            <span
+              class="text-[10px] text-slate-400 font-semibold uppercase tracking-widest border-b border-slate-200 pb-2">Key
+              Achievements</span>
+            <p class="text-slate-600 text-xs font-semibold leading-relaxed">3x National Gold Medalist<br>Asian Games
+              Representative</p>
+          </div>
         </div>
-        <h3 class="text-xl font-black text-slate-950 uppercase mb-4 tracking-tight">Traditional Roots</h3>
-        <p class="text-slate-500 text-sm leading-relaxed">
-          Trained under the direct guidance of Grandmaster [Name], our curriculum preserves the core values of Korean Martial Arts.
+
+        <div class="group text-center">
+          <div
+            class="relative aspect-[4/5] overflow-hidden rounded-[2.5rem] bg-slate-100 mb-8 transition-transform duration-500 group-hover:-translate-y-2">
+            <img src="images/team3.avif" alt="Anjali Sharma"
+              class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700">
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end justify-center pb-8">
+              <span class="text-white font-semibold uppercase text-[10px] tracking-widest">View Full Bio</span>
+            </div>
+          </div>
+          <h3 class="text-2xl font-semibold text-slate-950 uppercase tracking-tight">Anjali Sharma</h3>
+          <p class="text-blue-600 font-semibold text-[11px] uppercase tracking-widest mt-1 mb-4">4th Dan • Poomsae Head</p>
+          <div
+            class="card inline-flex flex-col gap-2 px-6 py-4 bg-slate-50 rounded-2xl border border-slate-100 w-full group-hover:border-blue-100 transition-colors">
+            <span
+              class="text-[10px] text-slate-400 font-semibold uppercase tracking-widest border-b border-slate-200 pb-2">Key
+              Achievements</span>
+            <p class="text-slate-600 text-xs font-semibold leading-relaxed">Commonwealth Silver (Poomsae)<br>WT
+              International Referee</p>
+          </div>
+        </div>
+
+        <div class="group text-center">
+          <div
+            class="relative aspect-[4/5] overflow-hidden rounded-[2.5rem] bg-slate-100 mb-8 transition-transform duration-500 group-hover:-translate-y-2">
+            <img src="images/team2.jpg" alt="Vikram Seth"
+              class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700">
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end justify-center pb-8">
+              <span class="text-white font-semibold uppercase text-[10px] tracking-widest">View Full Bio</span>
+            </div>
+          </div>
+          <h3 class="text-2xl font-semibold text-slate-950 uppercase tracking-tight">Vikram Seth</h3>
+          <p class="text-blue-600 font-semibold text-[11px] uppercase tracking-widest mt-1 mb-4">5th Dan • Sparring Coach
+          </p>
+          <div
+            class="card inline-flex flex-col gap-2 px-6 py-4 bg-slate-50 rounded-2xl border border-slate-100 w-full group-hover:border-blue-100 transition-colors">
+            <span
+              class="text-[10px] text-slate-400 font-semibold uppercase tracking-widest border-b border-slate-200 pb-2">Key
+              Achievements</span>
+            <p class="text-slate-600 text-xs font-semibold leading-relaxed">State Kickboxing Champion<br>12-0
+              Professional Record</p>
+          </div>
+        </div>
+
+        <div class="group text-center">
+          <div
+            class="relative aspect-[4/5] overflow-hidden rounded-[2.5rem] bg-slate-100 mb-8 transition-transform duration-500 group-hover:-translate-y-2">
+            <img src="images/team6.avif" alt="David Miller"
+              class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700">
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end justify-center pb-8">
+              <span class="text-white font-semibold uppercase text-[10px] tracking-widest">View Full Bio</span>
+            </div>
+          </div>
+          <h3 class="text-2xl font-semibold text-slate-950 uppercase tracking-tight">David Miller</h3>
+          <p class="text-blue-600 font-semibold text-[11px] uppercase tracking-widest mt-1 mb-4">3rd Dan • Youth Director
+          </p>
+          <div
+            class="card inline-flex flex-col gap-2 px-6 py-4 bg-slate-50 rounded-2xl border border-slate-100 w-full group-hover:border-blue-100 transition-colors">
+            <span
+              class="text-[10px] text-slate-400 font-semibold uppercase tracking-widest border-b border-slate-200 pb-2">Key
+              Achievements</span>
+            <p class="text-slate-600 text-xs font-semibold leading-relaxed">Junior Olympic Gold Coach<br>Black Belt Hall
+              of Fame 2022</p>
+          </div>
+        </div>
+
+        <div class="group text-center">
+          <div
+            class="relative aspect-[4/5] overflow-hidden rounded-[2.5rem] bg-slate-100 mb-8 transition-transform duration-500 group-hover:-translate-y-2">
+            <img src="images/team5.avif" alt="Arjun Varma"
+              class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700">
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end justify-center pb-8">
+              <span class="text-white font-semibold uppercase text-[10px] tracking-widest">View Full Bio</span>
+            </div>
+          </div>
+          <h3 class="text-2xl font-semibold text-slate-950 uppercase tracking-tight">Arjun Varma</h3>
+          <p class="text-blue-600 font-semibold text-[11px] uppercase tracking-widest mt-1 mb-4">Security Expert • Krav Maga
+          </p>
+          <div
+            class="card inline-flex flex-col gap-2 px-6 py-4 bg-slate-50 rounded-2xl border border-slate-100 w-full group-hover:border-blue-100 transition-colors">
+            <span
+              class="text-[10px] text-slate-400 font-semibold uppercase tracking-widest border-b border-slate-200 pb-2">Key
+              Achievements</span>
+            <p class="text-slate-600 text-xs font-semibold leading-relaxed">Ex-Special Forces Lead Trainer<br>Certified
+              Krav Maga Global</p>
+          </div>
+        </div>
+
+        <div class="group text-center">
+          <div
+            class="relative aspect-[4/5] overflow-hidden rounded-[2.5rem] bg-slate-100 mb-8 transition-transform duration-500 group-hover:-translate-y-2">
+            <img src="images/team4.avif" alt="Sarah Chen"
+              class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700">
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end justify-center pb-8">
+              <span class="text-white font-semibold uppercase text-[10px] tracking-widest">View Full Bio</span>
+            </div>
+          </div>
+          <h3 class="text-2xl font-semibold text-slate-950 uppercase tracking-tight">Sarah Chen</h3>
+          <p class="text-blue-600 font-semibold text-[11px] uppercase tracking-widest mt-1 mb-4">2nd Dan • Asst. Instructor
+          </p>
+          <div
+            class="card inline-flex flex-col gap-2 px-6 py-4 bg-slate-50 rounded-2xl border border-slate-100 w-full group-hover:border-blue-100 transition-colors">
+            <span
+              class="text-[10px] text-slate-400 font-semibold uppercase tracking-widest border-b border-slate-200 pb-2">Key
+              Achievements</span>
+            <p class="text-slate-600 text-xs font-semibold leading-relaxed">Regional Collegiate Champion<br>Women's
+              Self-Defense Advocate</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- SECTION2 -->
+  <section class="bg-white py-24 px-6 border-t border-slate-100">
+    <div class="max-w-7xl mx-auto">
+
+      <div class="text-center max-w-2xl mx-auto mb-20">
+        <span class="text-blue-600 font-semibold uppercase text-[10px] tracking-[0.4em] mb-4 block">Proven Authority</span>
+        <h2 class="text-4xl md:text-5xl font-semibold text-slate-950 uppercase tracking-tighter mb-6">
+          The <span class="text-blue-600">Lineage.</span>
+        </h2>
+        <p class="text-slate-500 font-medium text-sm leading-relaxed">
+          Our teaching philosophy is passed down through generations of masters, ensuring that every technique remains
+          authentic and effective.
         </p>
       </div>
 
-      <div class="card p-10 rounded-[2.5rem] bg-slate-50 border border-slate-100 flex flex-col items-center text-center group hover:border-blue-200 transition-colors">
-        <div class="w-20 h-20 bg-white rounded-2xl shadow-sm flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-          <i class="bi bi-trophy-fill text-3xl text-blue-600"></i>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-20">
+
+        <div
+          class="card p-10 rounded-[2.5rem] bg-slate-50 border border-slate-100 flex flex-col items-center text-center group hover:border-blue-200 transition-colors">
+          <div
+            class="w-20 h-20 bg-white rounded-2xl shadow-sm flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+            <i class="bi bi-person-workspace text-3xl text-blue-600"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-slate-950 uppercase mb-4 tracking-tight">Traditional Roots</h3>
+          <p class="text-slate-500 text-sm leading-relaxed">
+            Trained under the direct guidance of Grandmaster [Name], our curriculum preserves the core values of Korean
+            Martial Arts.
+          </p>
         </div>
-        <h3 class="text-xl font-black text-slate-950 uppercase mb-4 tracking-tight">Global Certification</h3>
-        <p class="text-slate-500 text-sm leading-relaxed">
-          Affiliated with Kukkiwon and World Taekwondo (WT), providing students with internationally recognized black belt certifications.
-        </p>
+
+        <div
+          class="card p-10 rounded-[2.5rem] bg-slate-50 border border-slate-100 flex flex-col items-center text-center group hover:border-blue-200 transition-colors">
+          <div
+            class="w-20 h-20 bg-white rounded-2xl shadow-sm flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+            <i class="bi bi-trophy-fill text-3xl text-blue-600"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-slate-950 uppercase mb-4 tracking-tight">Global Certification</h3>
+          <p class="text-slate-500 text-sm leading-relaxed">
+            Affiliated with Kukkiwon and World Taekwondo (WT), providing students with internationally recognized black
+            belt certifications.
+          </p>
+        </div>
+
       </div>
 
     </div>
+  </section>
+  <!-- SECTION3 -->
+  <section class="bg-slate-50 py-24 px-6 border-y border-slate-100">
+    <div class="max-w-7xl mx-auto">
 
-  </div>
-</section>
-<!-- SECTION3 -->
- <section class="bg-slate-50 py-24 px-6 border-y border-slate-100">
-  <div class="max-w-7xl mx-auto">
-    
-    <div class="text-center max-w-3xl mx-auto mb-20">
-      <span class="text-blue-600 font-black uppercase text-[10px] tracking-[0.4em] mb-4 block">Our Approach</span>
-      <h2 class="text-4xl md:text-5xl font-black text-slate-950 uppercase tracking-tighter mb-6">
-        The <span class="text-blue-600">Daksha</span> Way.
-      </h2>
-      <p class="text-slate-500 font-medium text-sm md:text-base leading-relaxed">
-        Martial arts is 10% physical and 90% mental. Our instructors follow a three-pillar system designed to build high-performance individuals.
-      </p>
+      <div class="text-center max-w-3xl mx-auto mb-20">
+        <span class="text-blue-600 font-semibold uppercase text-[10px] tracking-[0.4em] mb-4 block">Our Approach</span>
+        <h2 class="text-4xl md:text-5xl font-semibold text-slate-950 uppercase tracking-tighter mb-6">
+          The <span class="text-blue-600">Daksha</span> Way.
+        </h2>
+        <p class="text-slate-500 font-medium text-sm md:text-base leading-relaxed">
+          Martial arts is 10% physical and 90% mental. Our instructors follow a three-pillar system designed to build
+          high-performance individuals.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <div
+          class="card bg-white p-10 rounded-[2.5rem] shadow-sm border border-slate-100 text-center group hover:border-blue-500 transition-all duration-300">
+          <div
+            class="w-14 h-14 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-8 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+            <i class="bi bi-person-gear text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-slate-950 uppercase mb-4">Mindset First</h3>
+          <p class="text-slate-500 text-sm leading-relaxed">
+            We cultivate "Indomitable Spirit." Students learn to remain calm under pressure and develop peak focus.
+          </p>
+        </div>
+
+        <div
+          class="card bg-white p-10 rounded-[2.5rem] shadow-sm border border-slate-100 text-center group hover:border-blue-500 transition-all duration-300">
+          <div
+            class="w-14 h-14 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-8 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+            <i class="bi bi-lightning-charge-fill text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-slate-950 uppercase mb-4">Precision</h3>
+          <p class="text-slate-500 text-sm leading-relaxed">
+            No "watered-down" techniques. Our masters insist on perfect form and biomechanical efficiency.
+          </p>
+        </div>
+
+        <div
+          class="card bg-white p-10 rounded-[2.5rem] shadow-sm border border-slate-100 text-center group hover:border-blue-500 transition-all duration-300">
+          <div
+            class="w-14 h-14 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-8 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+            <i class="bi bi-shield-shaded"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-slate-950 uppercase mb-4">Modern Safety</h3>
+          <p class="text-slate-500 text-sm leading-relaxed">
+            We combine tradition with sports science. Environments are strictly supervised for zero-injury progress.
+          </p>
+        </div>
+
+      </div>
     </div>
-
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      
-      <div class="card bg-white p-10 rounded-[2.5rem] shadow-sm border border-slate-100 text-center group hover:border-blue-500 transition-all duration-300">
-        <div class="w-14 h-14 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-8 group-hover:bg-blue-600 group-hover:text-white transition-colors">
-          <i class="bi bi-person-gear text-2xl"></i>
-        </div>
-        <h3 class="text-xl font-black text-slate-950 uppercase mb-4">Mindset First</h3>
-        <p class="text-slate-500 text-sm leading-relaxed">
-          We cultivate "Indomitable Spirit." Students learn to remain calm under pressure and develop peak focus.
-        </p>
-      </div>
-
-      <div class="card bg-white p-10 rounded-[2.5rem] shadow-sm border border-slate-100 text-center group hover:border-blue-500 transition-all duration-300">
-        <div class="w-14 h-14 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-8 group-hover:bg-blue-600 group-hover:text-white transition-colors">
-          <i class="bi bi-lightning-charge-fill text-2xl"></i>
-        </div>
-        <h3 class="text-xl font-black text-slate-950 uppercase mb-4">Precision</h3>
-        <p class="text-slate-500 text-sm leading-relaxed">
-          No "watered-down" techniques. Our masters insist on perfect form and biomechanical efficiency.
-        </p>
-      </div>
-
-      <div class="card bg-white p-10 rounded-[2.5rem] shadow-sm border border-slate-100 text-center group hover:border-blue-500 transition-all duration-300">
-        <div class="w-14 h-14 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-8 group-hover:bg-blue-600 group-hover:text-white transition-colors">
-          <i class="bi bi-shield-shaded"></i>
-        </div>
-        <h3 class="text-xl font-black text-slate-950 uppercase mb-4">Modern Safety</h3>
-        <p class="text-slate-500 text-sm leading-relaxed">
-          We combine tradition with sports science. Environments are strictly supervised for zero-injury progress.
-        </p>
-      </div>
-
-    </div>
-  </div>
-</section>
+  </section>
 
   <!-- FOOTER -->
-    <div id="footer"></div>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            sans: ['Poppins', 'ui-sans-serif', 'system-ui'],
-          },
-        },
-      },
-    }
-  </script>
+  <div id="footer"></div>
+  
   <script src="navbar.js"></script>
   <script src="footer.js"></script>
 </body>

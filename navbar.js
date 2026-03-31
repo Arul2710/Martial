@@ -1,19 +1,19 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const navbar = document.getElementById("navbar");
-    if (!navbar) return;
+  const navbar = document.getElementById("navbar");
+  if (!navbar) return;
 
-    navbar.innerHTML = `
+  navbar.innerHTML = `
 <header id="mainNavbar"
   class="fixed top-0 left-0 w-full z-50 bg-[#1E3A8A] text-white shadow-[0_4px_12px_rgba(0,0,0,0.3)] transition-all duration-300">
 
-  <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+  <div class="max-w-7xl mx-auto flex items-center justify-between px-4 xl:px-6 py-4">
 
-    <h1 class="text-xl font-bold text-white flex items-center">
+    <h1 class="text-xl font-semibold text-white flex items-center shrink-0">
   <a href="index.html">Daksha Martial</a>
 </h1>
 
-    <div id="centerLinksWrapper" class="hidden lg:flex flex-1 justify-center">
-      <ul class="flex items-center gap-10 font-medium text-sm" id="navLinks">
+    <div id="centerLinksWrapper" class="hidden lg:flex flex-1 justify-center px-4">
+      <ul class="flex items-center gap-4 xl:gap-10 font-medium text-xs xl:text-sm whitespace-nowrap" id="navLinks">
 
         <li class="relative">
           <button id="homeDropdownBtn" class="flex items-center gap-1 transition hover:text-blue-300">
@@ -46,27 +46,22 @@ document.addEventListener("DOMContentLoaded", () => {
       </ul>
     </div>
 
-    <div id="rightButtons" class="hidden lg:flex items-center gap-4">
+    <div id="rightButtons" class="hidden lg:flex items-center gap-2 xl:gap-3 shrink-0">
+      <button id="theme-toggle" class="w-8 h-8 xl:w-9 xl:h-9 flex items-center justify-center rounded-md border border-white/20 hover:border-white/60 hover:bg-white/10 hover:text-blue-200 transition-all duration-300 text-white" title="Toggle Theme">
+        <i class="bi bi-moon-fill text-base xl:text-lg"></i>
+      </button>
 
-      <button id="theme-toggle" class="px-3 py-1.5 flex items-center justify-center rounded-md border-2 border-white hover:bg-white/10 hover:text-blue-300 hover:border-blue-300 transition-all duration-300 text-white">
-  <i class="bi bi-moon-fill text-lg"></i>
-</button>
+      <button id="rtlToggle" class="w-8 h-8 xl:w-9 xl:h-9 flex items-center justify-center text-[9px] xl:text-[10px] font-semibold rounded-md border border-white/20 hover:border-white/60 hover:bg-white/10 hover:text-blue-200 transition-all duration-300 text-white" title="Toggle RTL">
+        RTL
+      </button>
 
-<button id="rtlToggle" class="px-3 py-1.5 flex items-center justify-center text-sm font-bold rounded-md border-2 border-white hover:bg-white/10 hover:text-blue-300 hover:border-blue-300 transition-all duration-300 text-white">
-  RTL
-</button>
+      <a href="login.html" class="h-8 xl:h-9 px-3 xl:px-4 flex items-center justify-center bg-blue-500 hover:bg-white hover:text-blue-700 rounded-md text-[10px] xl:text-xs font-semibold uppercase tracking-widest transition-all duration-300 text-white shadow-md">
+        Login
+      </a>
 
-      <div class="relative">
-        <button id="profileBtn" class="text-2xl hover:text-blue-300">
-          <i class="bi bi-person-circle"></i>
-        </button>
-        <ul id="profileMenu"
-          class="absolute right-0 mt-3 w-44 bg-white text-[#1E3A8A] rounded-xl shadow-xl hidden z-50">
-          <li><a href="login.html" class="block px-4 py-2 hover:bg-blue-50 rounded-t-xl">Login</a></li>
-          <li><a href="sign.html" class="block px-4 py-2 hover:bg-blue-50 rounded-b-xl">Sign Up</a></li>
-        </ul>
-      </div>
-
+       <a href="sign.html" class="h-8 xl:h-9 px-3 xl:px-4 flex items-center justify-center bg-blue-500 hover:bg-white hover:text-blue-700 rounded-md text-[10px] xl:text-xs font-semibold uppercase tracking-widest transition-all duration-300 text-white shadow-md">
+        Sign Up
+      </a>
     </div>
 
     <button id="hamburgerBtn" class="lg:hidden text-3xl text-white">
@@ -87,7 +82,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   <!-- Header -->
   <div class="flex items-center justify-between p-5 border-b border-white">
-    <h2 class="text-xl font-bold">Menu</h2>
+    <h2 class="text-xl font-semibold">Menu</h2>
     <button id="closeMenuBtn" class="text-3xl">
       <i class="bi bi-x-lg"></i>
     </button>
@@ -132,27 +127,24 @@ document.addEventListener("DOMContentLoaded", () => {
       </li>
 
       <!-- Mobile Extras -->
-      <li class="pt-6 border-t border-white flex justify-around">
-
-         <button id="mobile-theme-toggle" class="px-3 py-1.5 flex items-center justify-center rounded-md border-2 border-white hover:bg-white/10 hover:text-blue-300 hover:border-blue-300 transition-all duration-300 text-white">
-  <i class="bi bi-moon-fill text-lg"></i>
-</button>
-
-<button id="mobile-rtl-toggle" class="px-3 py-1.5 flex items-center justify-center text-sm font-bold rounded-md border-2 border-white hover:bg-white/10 hover:text-blue-300 hover:border-blue-300 transition-all duration-300 text-white">
-  RTL
-</button>
-
-        <div class="relative">
-          <button id="mobileProfileBtn" class="text-2xl">
-            <i class="bi bi-person-circle"></i>
+      <li class="pt-6 border-t border-white/20 flex flex-col gap-4">
+        <div class="flex justify-around items-center">
+          <button id="mobile-theme-toggle" class="w-10 h-10 flex items-center justify-center rounded-md border border-white/20 hover:border-white/60 hover:bg-white/10 transition-all duration-300 text-white">
+            <i class="bi bi-moon-fill text-lg"></i>
           </button>
-          <ul id="mobileProfileMenu"
-            class="hidden absolute top-12 right-0 w-40  rounded-xl shadow-lg p-2 z-50">
-            <li><a href="login.html" class="block px-3 py-2">Login</a></li>
-            <li><a href="sign.html" class="block px-3 py-2">Sign Up</a></li>
-          </ul>
+
+          <button id="mobile-rtl-toggle" class="w-10 h-10 flex items-center justify-center text-[10px] font-semibold rounded-md border border-white/20 hover:border-white/60 hover:bg-white/10 transition-all duration-300 text-white">
+            RTL
+          </button>
         </div>
 
+        <a href="login.html" class="w-full py-3 bg-blue-500 hover:bg-white hover:text-blue-700 rounded-lg text-sm font-semibold uppercase tracking-widest transition-all duration-300 text-white text-center shadow-lg">
+          Login
+        </a>
+
+        <a href="sign.html" class="w-full py-3 bg-transparent border border-white/40 hover:border-white hover:bg-white/10 rounded-lg text-sm font-semibold uppercase tracking-widest transition-all duration-300 text-white text-center">
+          Sign Up
+        </a>
       </li>
 
     </ul>
@@ -160,329 +152,283 @@ document.addEventListener("DOMContentLoaded", () => {
 </div>
 `;
 
-    // Mobile Menu Toggle
-    const hamburgerBtn = document.getElementById('hamburgerBtn');
-    const closeMenuBtn = document.getElementById('closeMenuBtn');
-    const mobileMenu = document.getElementById('mobileMenu');
-    const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
-    const body = document.body;
+  // Mobile Menu Toggle
+  const hamburgerBtn = document.getElementById('hamburgerBtn');
+  const closeMenuBtn = document.getElementById('closeMenuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+  const body = document.body;
 
-    // Toggle mobile menu
-    function toggleMobileMenu() {
-        mobileMenu.classList.toggle('active');
-        mobileMenuOverlay.classList.toggle('active');
-        body.classList.toggle('mobile-menu-open');
+  // Toggle mobile menu
+  function toggleMobileMenu() {
+    mobileMenu.classList.toggle('active');
+    mobileMenuOverlay.classList.toggle('active');
+    body.classList.toggle('mobile-menu-open');
 
 
-        // Close mobile dropdown when closing menu
-        if (!mobileMenu.classList.contains('active')) {
-            mobileDropdownMenu.classList.remove('show');
-        }
+    // Close mobile dropdown when closing menu
+    if (!mobileMenu.classList.contains('active')) {
+      mobileDropdownMenu.classList.remove('show');
     }
+  }
 
-    // Open mobile menu
-    hamburgerBtn.addEventListener('click', toggleMobileMenu);
+  // Open mobile menu
+  hamburgerBtn.addEventListener('click', toggleMobileMenu);
 
-    // Close mobile menu
-    closeMenuBtn.addEventListener('click', toggleMobileMenu);
-    mobileMenuOverlay.addEventListener('click', toggleMobileMenu);
+  // Close mobile menu
+  closeMenuBtn.addEventListener('click', toggleMobileMenu);
+  mobileMenuOverlay.addEventListener('click', toggleMobileMenu);
 
-    // Close menu when clicking a link (optional)
-    const mobileLinks = mobileMenu.querySelectorAll('a');
-    mobileLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            toggleMobileMenu();
-        });
+  // Close menu when clicking a link (optional)
+  const mobileLinks = mobileMenu.querySelectorAll('a');
+  mobileLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      toggleMobileMenu();
+    });
+  });
+
+  // Mobile dropdown functionality
+  const mobileDropdownBtn = document.getElementById('mobileDropdownBtn');
+  const mobileDropdownMenu = document.getElementById('mobileDropdownMenu');
+
+  if (mobileDropdownBtn) {
+    mobileDropdownBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      mobileDropdownMenu.classList.toggle('show');
+    });
+  }
+
+  // Close mobile dropdown when clicking outside
+  document.addEventListener('click', (e) => {
+    if (mobileDropdownBtn && mobileDropdownMenu &&
+      !mobileDropdownBtn.contains(e.target) &&
+      !mobileDropdownMenu.contains(e.target)) {
+      mobileDropdownMenu.classList.remove('show');
+    }
+  });
+  const mobileDashboardBtn = document.getElementById("mobileDashboardBtn");
+  const mobileDashboardMenu = document.getElementById("mobileDashboardMenu");
+  const mobileDashboardChevron = document.getElementById("mobileDashboardChevron");
+
+  mobileDashboardBtn?.addEventListener("click", (e) => {
+    e.stopPropagation();
+
+    mobileDashboardMenu.classList.toggle("hidden");
+  });
+
+  // Desktop dropdown functionality
+  const homeDropdownBtn = document.getElementById('homeDropdownBtn');
+  const homeDropdownMenu = document.getElementById('homeDropdownMenu');
+
+  if (homeDropdownBtn) {
+    homeDropdownBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      homeDropdownMenu.classList.toggle('hidden');
     });
 
-    // Mobile dropdown functionality
-    const mobileDropdownBtn = document.getElementById('mobileDropdownBtn');
-    const mobileDropdownMenu = document.getElementById('mobileDropdownMenu');
-
-    if (mobileDropdownBtn) {
-        mobileDropdownBtn.addEventListener('click', (e) => {
-            e.stopPropagation();
-            mobileDropdownMenu.classList.toggle('show');
-        });
-    }
-
-    // Close mobile dropdown when clicking outside
+    // Close desktop dropdown when clicking outside
     document.addEventListener('click', (e) => {
-        if (mobileDropdownBtn && mobileDropdownMenu &&
-            !mobileDropdownBtn.contains(e.target) &&
-            !mobileDropdownMenu.contains(e.target)) {
-            mobileDropdownMenu.classList.remove('show');
-        }
+      if (!homeDropdownBtn.contains(e.target) && !homeDropdownMenu.contains(e.target)) {
+        homeDropdownMenu.classList.add('hidden');
+      }
     });
-    const mobileDashboardBtn = document.getElementById("mobileDashboardBtn");
-    const mobileDashboardMenu = document.getElementById("mobileDashboardMenu");
-    const mobileDashboardChevron = document.getElementById("mobileDashboardChevron");
+  }
 
-    mobileDashboardBtn?.addEventListener("click", (e) => {
-        e.stopPropagation();
-
-        mobileDashboardMenu.classList.toggle("hidden");
-    });
-
-    // Desktop dropdown functionality
-    const homeDropdownBtn = document.getElementById('homeDropdownBtn');
-    const homeDropdownMenu = document.getElementById('homeDropdownMenu');
-
-    if (homeDropdownBtn) {
-        homeDropdownBtn.addEventListener('click', (e) => {
-            e.stopPropagation();
-            homeDropdownMenu.classList.toggle('hidden');
-        });
-
-        // Close desktop dropdown when clicking outside
-        document.addEventListener('click', (e) => {
-            if (!homeDropdownBtn.contains(e.target) && !homeDropdownMenu.contains(e.target)) {
-                homeDropdownMenu.classList.add('hidden');
-            }
-        });
+  // Close mobile menu on window resize above 900px
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 820) {
+      mobileMenu.classList.remove('active');
+      mobileMenuOverlay.classList.remove('active');
+      body.classList.remove('mobile-menu-open');
+      if (mobileDropdownMenu) {
+        mobileDropdownMenu.classList.remove('show');
+      }
     }
+  });
 
-    // Close mobile menu on window resize above 900px
-    window.addEventListener('resize', () => {
-        if (window.innerWidth > 820) {
-            mobileMenu.classList.remove('active');
-            mobileMenuOverlay.classList.remove('active');
-            body.classList.remove('mobile-menu-open');
-            if (mobileDropdownMenu) {
-                mobileDropdownMenu.classList.remove('show');
-            }
-        }
-    });
+  // Close dropdowns on escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      if (mobileDropdownMenu) {
+        mobileDropdownMenu.classList.remove('show');
+      }
 
-    // Close dropdowns on escape key
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') {
-            if (mobileDropdownMenu) {
-                mobileDropdownMenu.classList.remove('show');
-            }
+      if (homeDropdownMenu) {
+        homeDropdownMenu.classList.add('hidden');
+      }
 
-            if (homeDropdownMenu) {
-                homeDropdownMenu.classList.add('hidden');
-            }
-
-            if (window.innerWidth <= 820) {
-                toggleMobileMenu();
-            }
-        }
-    });
-
-    // Prevent body scroll when mobile menu is open
-    const observer = new MutationObserver((mutations) => {
-        mutations.forEach((mutation) => {
-            if (mutation.attributeName === 'class') {
-                if (body.classList.contains('mobile-menu-open')) {
-                    document.documentElement.style.overflow = 'hidden';
-                } else {
-                    document.documentElement.style.overflow = '';
-                }
-            }
-        });
-    });
-
-    observer.observe(body, { attributes: true });
-    // Dark/light mode toggle
-    const toggleBtn = document.getElementById("theme-toggle");
-
-    const savedTheme = localStorage.getItem("theme");
-    if (savedTheme) {
-        document.documentElement.setAttribute("data-theme", savedTheme);
-        toggleBtn.innerHTML = savedTheme === "dark"
-            ? `<i class="bi bi-brightness-high-fill"></i>`
-            : `<i class="bi bi-moon-fill"></i>`;
+      if (window.innerWidth <= 820) {
+        toggleMobileMenu();
+      }
     }
+  });
 
-    toggleBtn.addEventListener("click", () => {
-        let theme = document.documentElement.getAttribute("data-theme");
-
-        if (theme === "dark") {
-            document.documentElement.setAttribute("data-theme", "light");
-            localStorage.setItem("theme", "light");
-            toggleBtn.innerHTML = `<i class="bi bi-moon-fill"></i>`;
+  // Prevent body scroll when mobile menu is open
+  const observer = new MutationObserver((mutations) => {
+    mutations.forEach((mutation) => {
+      if (mutation.attributeName === 'class') {
+        if (body.classList.contains('mobile-menu-open')) {
+          document.documentElement.style.overflow = 'hidden';
         } else {
-            document.documentElement.setAttribute("data-theme", "dark");
-            localStorage.setItem("theme", "dark");
-            toggleBtn.innerHTML = `<i class="bi bi-brightness-high-fill"></i>`;
+          document.documentElement.style.overflow = '';
         }
+      }
     });
+  });
 
-    // RTL toggle
-    const rtlToggle = document.getElementById("rtlToggle");
+  observer.observe(body, { attributes: true });
+  // Dark/light mode toggle
+  const toggleBtn = document.getElementById("theme-toggle");
 
-    rtlToggle.onclick = () => {
-        const html = document.documentElement;
+  const savedTheme = localStorage.getItem("theme");
+  if (savedTheme) {
+    document.documentElement.setAttribute("data-theme", savedTheme);
+    toggleBtn.innerHTML = savedTheme === "dark"
+      ? `<i class="bi bi-brightness-high-fill"></i>`
+      : `<i class="bi bi-moon-fill"></i>`;
+  }
 
-        if (html.getAttribute("dir") === "rtl") {
-            html.setAttribute("dir", "ltr");
-        } else {
-            html.setAttribute("dir", "rtl");
-        }
-    };
+  toggleBtn.addEventListener("click", () => {
+    let theme = document.documentElement.getAttribute("data-theme");
 
-    // Highlight active nav link
-    const currentPath = window.location.pathname.split("/").pop();
-
-    const allNavLinks = document.querySelectorAll(
-        '#navLinks > li > a, #mobileMenu > ul > li > a'
-    );
-
-    allNavLinks.forEach(link => {
-        const linkPath = link.getAttribute("href");
-
-        if (linkPath === currentPath) {
-            link.classList.add("nav-active");
-        }
-    });
-
-    // Make Home dropdown button bold and remove underline
-    if (currentPath === "index.html" || currentPath === "home2.html") {
-        document.getElementById("homeDropdownBtn")?.classList.add("home-active");
-        document.getElementById("mobileDropdownBtn")?.classList.add("home-active");
+    if (theme === "dark") {
+      document.documentElement.setAttribute("data-theme", "light");
+      localStorage.setItem("theme", "light");
+      toggleBtn.innerHTML = `<i class="bi bi-moon-fill"></i>`;
+    } else {
+      document.documentElement.setAttribute("data-theme", "dark");
+      localStorage.setItem("theme", "dark");
+      toggleBtn.innerHTML = `<i class="bi bi-brightness-high-fill"></i>`;
     }
-    //profile dropdown (desktop)
-    const authBtn = document.getElementById("authBtn");
-    const authMenu = document.getElementById("authMenu");
+  });
 
-    if (authBtn && authMenu) {
-        authBtn.addEventListener("click", (e) => {
-            e.stopPropagation();
-            authMenu.classList.toggle("hidden");
-        });
+  // RTL toggle
+  const rtlToggle = document.getElementById("rtlToggle");
 
-        // Close on outside click
-        document.addEventListener("click", () => {
-            authMenu.classList.add("hidden");
-        });
+  rtlToggle.onclick = () => {
+    const html = document.documentElement;
 
-        // Close on ESC
-        document.addEventListener("keydown", (e) => {
-            if (e.key === "Escape") {
-                authMenu.classList.add("hidden");
-            }
-        });
+    if (html.getAttribute("dir") === "rtl") {
+      html.setAttribute("dir", "ltr");
+    } else {
+      html.setAttribute("dir", "rtl");
     }
-    // dashboard
-    const dashboardBtn = document.getElementById("dashboardDropdownBtn");
-    const dashboardMenu = document.getElementById("dashboardDropdownMenu");
+  };
 
-    if (dashboardBtn) {
-        dashboardBtn.addEventListener("click", (e) => {
-            e.stopPropagation();
-            dashboardMenu.classList.toggle("hidden");
-        });
+  // Highlight active nav link
+  const currentPath = window.location.pathname.split("/").pop();
 
-        document.addEventListener("click", (e) => {
-            if (!dashboardBtn.contains(e.target) &&
-                !dashboardMenu.contains(e.target)) {
-                dashboardMenu.classList.add("hidden");
-            }
-        });
+  const allNavLinks = document.querySelectorAll(
+    '#navLinks > li > a, #mobileMenu > ul > li > a'
+  );
+
+  allNavLinks.forEach(link => {
+    const linkPath = link.getAttribute("href");
+
+    if (linkPath === currentPath) {
+      link.classList.add("nav-active");
     }
+  });
 
-    // ===== ACTIVE NAV (DESKTOP + MOBILE) =====
-    const currentPage =
-        window.location.pathname.split("/").pop() || "index.html";
+  // Make Home dropdown button bold and remove underline
+  if (currentPath === "index.html" || currentPath === "home2.html") {
+    document.getElementById("homeDropdownBtn")?.classList.add("home-active");
+    document.getElementById("mobileDropdownBtn")?.classList.add("home-active");
+  }
+  //profile dropdown (desktop)
+  const authBtn = document.getElementById("authBtn");
+  const authMenu = document.getElementById("authMenu");
 
-    // Desktop links
-    document.querySelectorAll("#navLinks a").forEach(link => {
-        if (link.getAttribute("href") === currentPage) {
-            link.classList.add("nav-active");
-        }
+  if (authBtn && authMenu) {
+    authBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      authMenu.classList.toggle("hidden");
     });
 
-    // Mobile links (✅ FIXED selector)
-    document.querySelectorAll("#mobileMenu a").forEach(link => {
-        if (link.getAttribute("href") === currentPage) {
-            link.classList.add("nav-active");
-
-            // If Home submenu is active → open dropdown + bold Home
-            if (link.closest("#mobileDropdownMenu")) {
-                document.getElementById("mobileDropdownMenu")?.classList.add("show");
-                document.getElementById("mobileDropdownBtn")?.classList.add("home-active");
-            }
-        }
+    // Close on outside click
+    document.addEventListener("click", () => {
+      authMenu.classList.add("hidden");
     });
 
-    // Desktop Home dropdown button
-    if (currentPage === "index.html" || currentPage === "home2.html") {
-        document.getElementById("homeDropdownBtn")?.classList.add("home-active");
-    }
-    // ===== PROFILE DROPDOWN =====
-    const profileBtn = document.getElementById("profileBtn");
-    const profileMenu = document.getElementById("profileMenu");
+    // Close on ESC
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") {
+        authMenu.classList.add("hidden");
+      }
+    });
+  }
+  // dashboard
+  const dashboardBtn = document.getElementById("dashboardDropdownBtn");
+  const dashboardMenu = document.getElementById("dashboardDropdownMenu");
 
-    if (profileBtn && profileMenu) {
-        profileBtn.addEventListener("click", (e) => {
-            e.stopPropagation();
-
-            // close other dropdowns
-            document.getElementById("homeDropdownMenu")?.classList.add("hidden");
-            document.getElementById("dashboardDropdownMenu")?.classList.add("hidden");
-
-            profileMenu.classList.toggle("hidden");
-        });
-
-        // close on outside click
-        document.addEventListener("click", (e) => {
-            if (!profileBtn.contains(e.target) &&
-                !profileMenu.contains(e.target)) {
-                profileMenu.classList.add("hidden");
-            }
-        });
-
-        // close on ESC
-        document.addEventListener("keydown", (e) => {
-            if (e.key === "Escape") {
-                profileMenu.classList.add("hidden");
-            }
-        });
-    }
-    const mobileThemeToggle = document.getElementById("mobile-theme-toggle");
-
-    mobileThemeToggle?.addEventListener("click", () => {
-        let theme = document.documentElement.getAttribute("data-theme");
-
-        if (theme === "dark") {
-            document.documentElement.setAttribute("data-theme", "light");
-            localStorage.setItem("theme", "light");
-            mobileThemeToggle.innerHTML = `<i class="bi bi-moon-fill"></i>`;
-        } else {
-            document.documentElement.setAttribute("data-theme", "dark");
-            localStorage.setItem("theme", "dark");
-            mobileThemeToggle.innerHTML = `<i class="bi bi-brightness-high-fill"></i>`;
-        }
+  if (dashboardBtn) {
+    dashboardBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      dashboardMenu.classList.toggle("hidden");
     });
 
-    const mobileRtlToggle = document.getElementById("mobile-rtl-toggle");
-
-    mobileRtlToggle?.addEventListener("click", () => {
-        const html = document.documentElement;
-
-        if (html.getAttribute("dir") === "rtl") {
-            html.setAttribute("dir", "ltr");
-        } else {
-            html.setAttribute("dir", "rtl");
-        }
-    });
-
-    const mobileProfileBtn = document.getElementById("mobileProfileBtn");
-    const mobileProfileMenu = document.getElementById("mobileProfileMenu");
-
-    mobileProfileBtn?.addEventListener("click", (e) => {
-        e.stopPropagation();
-        mobileProfileMenu.classList.toggle("hidden");
-    });
-
-    // close on outside click
     document.addEventListener("click", (e) => {
-        if (!mobileProfileBtn?.contains(e.target) &&
-            !mobileProfileMenu?.contains(e.target)) {
-            mobileProfileMenu?.classList.add("hidden");
-        }
+      if (!dashboardBtn.contains(e.target) &&
+        !dashboardMenu.contains(e.target)) {
+        dashboardMenu.classList.add("hidden");
+      }
     });
+  }
+
+  // ===== ACTIVE NAV (DESKTOP + MOBILE) =====
+  const currentPage =
+    window.location.pathname.split("/").pop() || "index.html";
+
+  // Desktop links
+  document.querySelectorAll("#navLinks a").forEach(link => {
+    if (link.getAttribute("href") === currentPage) {
+      link.classList.add("nav-active");
+    }
+  });
+
+  // Mobile links (✅ FIXED selector)
+  document.querySelectorAll("#mobileMenu a").forEach(link => {
+    if (link.getAttribute("href") === currentPage) {
+      link.classList.add("nav-active");
+
+      // If Home submenu is active → open dropdown + bold Home
+      if (link.closest("#mobileDropdownMenu")) {
+        document.getElementById("mobileDropdownMenu")?.classList.add("show");
+        document.getElementById("mobileDropdownBtn")?.classList.add("home-active");
+      }
+    }
+  });
+
+  // Desktop Home dropdown button
+  if (currentPage === "index.html" || currentPage === "home2.html") {
+    document.getElementById("homeDropdownBtn")?.classList.add("home-active");
+  }
+  const mobileThemeToggle = document.getElementById("mobile-theme-toggle");
+
+  mobileThemeToggle?.addEventListener("click", () => {
+    let theme = document.documentElement.getAttribute("data-theme");
+
+    if (theme === "dark") {
+      document.documentElement.setAttribute("data-theme", "light");
+      localStorage.setItem("theme", "light");
+      mobileThemeToggle.innerHTML = `<i class="bi bi-moon-fill"></i>`;
+    } else {
+      document.documentElement.setAttribute("data-theme", "dark");
+      localStorage.setItem("theme", "dark");
+      mobileThemeToggle.innerHTML = `<i class="bi bi-brightness-high-fill"></i>`;
+    }
+  });
+
+  const mobileRtlToggle = document.getElementById("mobile-rtl-toggle");
+
+  mobileRtlToggle?.addEventListener("click", () => {
+    const html = document.documentElement;
+
+    if (html.getAttribute("dir") === "rtl") {
+      html.setAttribute("dir", "ltr");
+    } else {
+      html.setAttribute("dir", "rtl");
+    }
+  });
 
 });
